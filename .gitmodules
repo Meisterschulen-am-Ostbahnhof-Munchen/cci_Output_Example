@@ -1,0 +1,9 @@
+[submodule "Output_Example/components/lib_cci"]
+	path = Output_Example/components/lib_cci
+	url = https://github.com/Meisterschulen-am-Ostbahnhof-Munchen/cci_ecu_driver_private.git
+[submodule "Output_Example/components/tcp_server"]
+	path = Output_Example/components/tcp_server
+	url = https://github.com/Meisterschulen-am-Ostbahnhof-Munchen/tcp_server.git
+[submodule "Output_Example/components/can2ip"]
+	path = Output_Example/components/can2ip
+	url = https://github.com/Meisterschulen-am-Ostbahnhof-Munchen/can2ip.git

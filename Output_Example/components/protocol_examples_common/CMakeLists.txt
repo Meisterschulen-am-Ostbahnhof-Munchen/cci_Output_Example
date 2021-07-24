@@ -1,0 +1,6 @@
+if(CONFIG_CAN2IP_MODE_ON)	            
+	set(COMPONENT_SRCS   "connect.c" "stdin_out.c")				               
+	set(COMPONENT_ADD_INCLUDEDIRS "include")
+endif()
+set(COMPONENT_PRIV_REQUIRES esp_netif)
+register_component()
