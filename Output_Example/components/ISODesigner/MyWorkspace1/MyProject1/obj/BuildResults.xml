@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JVS-ISO-Build BuildTime-Start="24.07.2021 15:32:20" BuildTime-Finished="24.07.2021 15:32:20" Errors="0" Warnings="1">
+	<Errors/>
+	<Warnings>
+		<Warnings Nr="8" Description="SoftkeyMask (ID: 4000), empty designators #0, #1, #2, #3, #4, #5, #6 found and filled with pointer to NULL (ID: 27000)." File=""/>
+	</Warnings>
+</JVS-ISO-Build>

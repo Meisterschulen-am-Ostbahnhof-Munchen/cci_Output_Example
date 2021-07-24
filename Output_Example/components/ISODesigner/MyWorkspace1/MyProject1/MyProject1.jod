@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JetViewSoft-DefaultObjects Version="3.0" ProductVersion="5.5.1.4367" RelatedObjectPool=".\MyProject1.jop">
+	<Objects>
+		<Object Class="GraphicObject">
+			<Objects>
+				<Object Class="CLineStyle" JVS-ID="24000" ObjectName="LineAttributes_24000"/>
+				<Object Class="CFillStyle" JVS-ID="25000" ObjectName="FillAttributes_25000"/>
+			</Objects>
+		</Object>
+	</Objects>
+</JetViewSoft-DefaultObjects>
