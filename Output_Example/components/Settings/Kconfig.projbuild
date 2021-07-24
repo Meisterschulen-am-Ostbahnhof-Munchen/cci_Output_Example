@@ -1,0 +1,15 @@
+menu "SETTINGS API"
+			
+	config SETTINGS_DEBUG
+	bool "Debug output"
+	default 1
+	
+	config SETTINGS_DEBUG_TAG
+	string "Debug Tag"
+	default "SETTINGS API"
+	
+	config SETTINGS_NAMESPACE
+	string "Namespace"
+	default "storage"
+	
+endmenu
