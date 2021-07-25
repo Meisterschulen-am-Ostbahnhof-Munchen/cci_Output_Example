@@ -289,7 +289,7 @@ static void CbVtStatus(const ISOVT_STATUS_DATA_T* psStatusData)
 {
    switch (psStatusData->wPage)
    {
-   case DataMask_1000:
+   case DataMask_Main:
       break;
 
    default:
