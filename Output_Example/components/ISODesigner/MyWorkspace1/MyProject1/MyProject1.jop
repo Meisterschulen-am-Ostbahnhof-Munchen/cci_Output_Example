@@ -121,7 +121,7 @@
 		<Object Class="CSoftKey" Name="SoftKey" ObjectName="SoftKey_Q1" Pinned="FALSE" JVS-ID="5001">
 			<PropertySheet Name="SoftKey">
 				<Property Name="BackColor">
-					<Value>15790320</Value>
+					<Value>3394611</Value>
 				</Property>
 				<Property Name="KeyCode">
 					<Value>1</Value>
@@ -154,7 +154,7 @@
 		<Object Class="CSoftKey" Name="SoftKey" ObjectName="SoftKey_Q2" Pinned="FALSE" JVS-ID="5002">
 			<PropertySheet Name="SoftKey">
 				<Property Name="BackColor">
-					<Value>15790320</Value>
+					<Value>3394611</Value>
 				</Property>
 				<Property Name="KeyCode">
 					<Value>1</Value>
@@ -187,7 +187,7 @@
 		<Object Class="CSoftKey" Name="SoftKey" ObjectName="SoftKey_Q3" Pinned="FALSE" JVS-ID="5003">
 			<PropertySheet Name="SoftKey">
 				<Property Name="BackColor">
-					<Value>15790320</Value>
+					<Value>13382451</Value>
 				</Property>
 				<Property Name="KeyCode">
 					<Value>1</Value>
@@ -220,7 +220,7 @@
 		<Object Class="CSoftKey" Name="SoftKey" ObjectName="SoftKey_Q4" Pinned="FALSE" JVS-ID="5004">
 			<PropertySheet Name="SoftKey">
 				<Property Name="BackColor">
-					<Value>15790320</Value>
+					<Value>13382451</Value>
 				</Property>
 				<Property Name="KeyCode">
 					<Value>1</Value>
@@ -441,13 +441,13 @@
 		<Object Class="CAuxFunction" Name="AuxFunction" ObjectName="AuxFunction2_Q1" Pinned="TRUE" JVS-ID="29001">
 			<PropertySheet Name="AuxFunction">
 				<Property Name="BackColor">
-					<Value>16777215</Value>
+					<Value>3394611</Value>
 				</Property>
 				<Property Name="FunctionType">
 					<Value>0</Value>
 				</Property>
 				<Property Name="FunctionType2">
-					<Value>0</Value>
+					<Value>2</Value>
 				</Property>
 				<Property Name="CriticalControl">
 					<Value>0</Value>
@@ -468,10 +468,10 @@
 					<Value/>
 				</Property>
 				<Property Name="Width">
-					<Value>160</Value>
+					<Value>80</Value>
 				</Property>
 				<Property Name="Height">
-					<Value>80</Value>
+					<Value>40</Value>
 				</Property>
 				<Property Name="Visible">
 					<Value>1</Value>
@@ -492,13 +492,13 @@
 		<Object Class="CAuxFunction" Name="AuxFunction" ObjectName="AuxFunction2_Q2" Pinned="TRUE" JVS-ID="29002">
 			<PropertySheet Name="AuxFunction">
 				<Property Name="BackColor">
-					<Value>16777215</Value>
+					<Value>3394611</Value>
 				</Property>
 				<Property Name="FunctionType">
 					<Value>0</Value>
 				</Property>
 				<Property Name="FunctionType2">
-					<Value>0</Value>
+					<Value>2</Value>
 				</Property>
 				<Property Name="CriticalControl">
 					<Value>0</Value>
@@ -519,10 +519,10 @@
 					<Value/>
 				</Property>
 				<Property Name="Width">
-					<Value>160</Value>
+					<Value>80</Value>
 				</Property>
 				<Property Name="Height">
-					<Value>80</Value>
+					<Value>40</Value>
 				</Property>
 				<Property Name="Visible">
 					<Value>1</Value>
@@ -543,13 +543,13 @@
 		<Object Class="CAuxFunction" Name="AuxFunction" ObjectName="AuxFunction2_Q3" Pinned="TRUE" JVS-ID="29003">
 			<PropertySheet Name="AuxFunction">
 				<Property Name="BackColor">
-					<Value>16777215</Value>
+					<Value>13382451</Value>
 				</Property>
 				<Property Name="FunctionType">
 					<Value>0</Value>
 				</Property>
 				<Property Name="FunctionType2">
-					<Value>0</Value>
+					<Value>2</Value>
 				</Property>
 				<Property Name="CriticalControl">
 					<Value>0</Value>
@@ -570,10 +570,10 @@
 					<Value/>
 				</Property>
 				<Property Name="Width">
-					<Value>160</Value>
+					<Value>80</Value>
 				</Property>
 				<Property Name="Height">
-					<Value>80</Value>
+					<Value>40</Value>
 				</Property>
 				<Property Name="Visible">
 					<Value>1</Value>
@@ -594,13 +594,13 @@
 		<Object Class="CAuxFunction" Name="AuxFunction" ObjectName="AuxFunction2_Q4" Pinned="TRUE" JVS-ID="29004">
 			<PropertySheet Name="AuxFunction">
 				<Property Name="BackColor">
-					<Value>16777215</Value>
+					<Value>13382451</Value>
 				</Property>
 				<Property Name="FunctionType">
 					<Value>0</Value>
 				</Property>
 				<Property Name="FunctionType2">
-					<Value>0</Value>
+					<Value>2</Value>
 				</Property>
 				<Property Name="CriticalControl">
 					<Value>0</Value>
@@ -621,10 +621,10 @@
 					<Value/>
 				</Property>
 				<Property Name="Width">
-					<Value>160</Value>
+					<Value>80</Value>
 				</Property>
 				<Property Name="Height">
-					<Value>80</Value>
+					<Value>40</Value>
 				</Property>
 				<Property Name="Visible">
 					<Value>1</Value>
