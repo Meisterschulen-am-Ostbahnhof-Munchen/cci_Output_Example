@@ -56,7 +56,7 @@ CommandTranslateObject CommandTranslate[] = {
 
 //make this Defines (Right side)
 const int FIRST_AUX = AuxFunction2_Q1;
-const int  LAST_AUX = AuxFunction2_Q2;
+const int  LAST_AUX = AuxFunction2_Q4;
 //do not Change this.
 const int  NUM_AUX_FUNCTIONS = ((LAST_AUX-FIRST_AUX)+1);
 iso_s32 InputSignalData_old_value1[20] = {AUX_PRESS_OFF};
