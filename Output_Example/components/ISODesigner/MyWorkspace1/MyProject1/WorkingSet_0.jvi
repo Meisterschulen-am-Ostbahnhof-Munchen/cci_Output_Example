@@ -125,7 +125,7 @@
 		</PropertySheet>
 	</PropertySheets>
 	<Components>
-		<Component ID="109777690" Class="CRectangle" Name="Rectangle">
+		<Component ID="328346032" Class="CImage" Name="Image">
 			<PropertySheets>
 				<PropertySheet Name="General">
 					<Property Name="ZOrder">
@@ -134,13 +134,13 @@
 				</PropertySheet>
 				<PropertySheet Name="Proxy">
 					<Property Name="Top">
-						<Value>18</Value>
+						<Value>0</Value>
 					</Property>
 					<Property Name="Left">
-						<Value>36</Value>
+						<Value>0</Value>
 					</Property>
 					<Property Name="Transform">
-						<Value>(1.0000000000000000)(0.0000000000000000)(36.0000000000000000)(0.0000000000000000)(1.0000000000000000)(18.0000000000000000)</Value>
+						<Value>(1.0000000000000000)(0.0000000000000000)(0.0000000000000000)(0.0000000000000000)(1.0000000000000000)(0.0000000000000000)</Value>
 					</Property>
 					<Property Name="ReferencedObjectForMask">
 						<Value>-1</Value>
@@ -148,7 +148,7 @@
 				</PropertySheet>
 			</PropertySheets>
 			<Objects>
-				<Object JVS-ID="14000"/>
+				<Object JVS-ID="20000"/>
 			</Objects>
 		</Component>
 	</Components>

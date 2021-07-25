@@ -13,11 +13,8 @@
 #define SoftKey_Q2                         5002
 #define SoftKey_Q3                         5003
 #define SoftKey_Q4                         5004
-#define Rectangle_14000                   14000
 #define CylinderOut_20000                 20000
 #define CylinderIn_20001                  20001
-#define LineAttributes_24000              24000
-#define FillAttributes_25000              25000
 #define ObjectPointer_NULL                27001
 #define AuxFunction2_Q1                   29001
 #define AuxFunction2_Q2                   29002
