@@ -2,8 +2,8 @@
 // Do not change!
 
 #define WorkingSet_0_Offset                                     1
-#define DataMask_1000_Offset                                   21
-#define SoftKeyMask_4000_Offset                                29
+#define DataMask_Main_Offset                                   21
+#define SoftKeyMask_Main_Offset                                29
 #define SoftKey_Q1_Offset                                      57
 #define SoftKey_Q2_Offset                                      64
 #define SoftKey_Q3_Offset                                      71

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<JetView-Document Version="0" ObjectPoolVersion="3.0" ProductVersion="5.5.1.4367">
+<JetView-Document Version="1" ObjectPoolVersion="3.0" ProductVersion="5.5.1.4367">
 	<PropertySheets>
 		<PropertySheet Name="General">
 			<Property Name="ObjectID">
@@ -11,7 +11,7 @@
 				</Value>
 			</Property>
 			<Property Name="BackColor">
-				<Value>12632256</Value>
+				<Value>12566463</Value>
 			</Property>
 			<Property Name="MaskType">
 				<Value>1</Value>

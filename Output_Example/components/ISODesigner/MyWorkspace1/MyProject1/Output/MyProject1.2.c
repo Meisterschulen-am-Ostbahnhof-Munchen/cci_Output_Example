@@ -5,8 +5,8 @@
 
 const unsigned long ISO_OP_MEMORY_CLASS isoOP_MyProject1_Offset[] = {
 	     1,  // WorkingSet_0_Offset
-	    21,  // DataMask_1000_Offset
-	    29,  // SoftKeyMask_4000_Offset
+	    21,  // DataMask_Main_Offset
+	    29,  // SoftKeyMask_Main_Offset
 	    57,  // SoftKey_Q1_Offset
 	    64,  // SoftKey_Q2_Offset
 	    71,  // SoftKey_Q3_Offset

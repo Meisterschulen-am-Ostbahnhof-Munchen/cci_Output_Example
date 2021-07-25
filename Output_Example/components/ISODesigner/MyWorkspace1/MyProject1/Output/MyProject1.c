@@ -17,12 +17,12 @@
 
 const unsigned char ISO_OP_MEMORY_CLASS isoOP_MyProject1[] = {
 	17,
-	ID(WorkingSet_0), TYPEID_WORKSET, COLOR(249), 1, ID(DataMask_1000), 1, 0, 2,
+	ID(WorkingSet_0), TYPEID_WORKSET, COLOR(249), 1, ID(DataMask_Main), 1, 0, 2,
 		XYREF(Rectangle_14000, 36, 18),
 		'e', 'n',
 		'd', 'e',
-	ID(DataMask_1000), TYPEID_DATAMASK, COLOR(249), ID(ID_NULL), 0, 0, 
-	ID(SoftKeyMask_4000), TYPEID_SKEYMASK, COLOR_SILVER, 11, 0, 
+	ID(DataMask_Main), TYPEID_DATAMASK, COLOR(249), ID(ID_NULL), 0, 0, 
+	ID(SoftKeyMask_Main), TYPEID_SKEYMASK, COLOR_SILVER, 11, 0, 
 		REF(Generated_Pointer_To_Null),
 		REF(Generated_Pointer_To_Null),
 		REF(Generated_Pointer_To_Null),

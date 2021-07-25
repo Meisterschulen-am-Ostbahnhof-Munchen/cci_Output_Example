@@ -7,8 +7,8 @@
 #define MASK_WIDTH                          480
 #define MASK_HEIGHT                         480
 #define WorkingSet_0                          0
-#define DataMask_1000                      1000
-#define SoftKeyMask_4000                   4000
+#define DataMask_Main                      1000
+#define SoftKeyMask_Main                   4000
 #define SoftKey_Q1                         5001
 #define SoftKey_Q2                         5002
 #define SoftKey_Q3                         5003

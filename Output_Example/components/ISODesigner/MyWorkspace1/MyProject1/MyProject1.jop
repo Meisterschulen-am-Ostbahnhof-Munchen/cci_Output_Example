@@ -88,13 +88,13 @@
 				</Property>
 			</PropertySheet>
 		</Object>
-		<Object Class="CDataMask" Name="" ObjectName="DataMask_1000" Pinned="FALSE" JVS-ID="1000" JVS-RefCount="1">
+		<Object Class="CDataMask" Name="" ObjectName="DataMask_Main" Pinned="FALSE" JVS-ID="1000" JVS-RefCount="1">
 			<PropertySheet Name="Model">
 				<Property Name="MaskType">
 					<Value>1</Value>
 				</Property>
 				<Property Name="Path">
-					<Value>.\DataMask_1000.jvi</Value>
+					<Value>.\DataMask_Main.jvi</Value>
 				</Property>
 				<Property Name="Comment">
 					<Value>
@@ -103,13 +103,13 @@
 				</Property>
 			</PropertySheet>
 		</Object>
-		<Object Class="CSoftKeyMask" Name="" ObjectName="SoftKeyMask_4000" Pinned="FALSE" JVS-ID="4000" JVS-RefCount="1">
+		<Object Class="CSoftKeyMask" Name="" ObjectName="SoftKeyMask_Main" Pinned="FALSE" JVS-ID="4000" JVS-RefCount="1">
 			<PropertySheet Name="Model">
 				<Property Name="MaskType">
 					<Value>2</Value>
 				</Property>
 				<Property Name="Path">
-					<Value>.\SoftKeyMask_4000.jvi</Value>
+					<Value>.\SoftKeyMask_Main.jvi</Value>
 				</Property>
 				<Property Name="Comment">
 					<Value>
