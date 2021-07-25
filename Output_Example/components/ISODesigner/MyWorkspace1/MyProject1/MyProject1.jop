@@ -471,7 +471,7 @@
 					<Value>80</Value>
 				</Property>
 				<Property Name="Height">
-					<Value>40</Value>
+					<Value>80</Value>
 				</Property>
 				<Property Name="Visible">
 					<Value>1</Value>
@@ -522,7 +522,7 @@
 					<Value>80</Value>
 				</Property>
 				<Property Name="Height">
-					<Value>40</Value>
+					<Value>80</Value>
 				</Property>
 				<Property Name="Visible">
 					<Value>1</Value>
@@ -573,7 +573,7 @@
 					<Value>80</Value>
 				</Property>
 				<Property Name="Height">
-					<Value>40</Value>
+					<Value>80</Value>
 				</Property>
 				<Property Name="Visible">
 					<Value>1</Value>
@@ -624,7 +624,7 @@
 					<Value>80</Value>
 				</Property>
 				<Property Name="Height">
-					<Value>40</Value>
+					<Value>80</Value>
 				</Property>
 				<Property Name="Visible">
 					<Value>1</Value>
