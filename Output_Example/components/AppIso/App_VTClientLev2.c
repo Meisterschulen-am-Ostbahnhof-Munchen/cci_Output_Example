@@ -264,13 +264,13 @@ void VTC_handleSoftkeysAndButtons(const struct ButtonActivation_S *pButtonData)
 		VTC_handleSoftkeysAndButton_Q1(pButtonData);
 		break;
 	case SoftKey_Q2:
-		VTC_handleSoftkeysAndButton_Q1(pButtonData);
+		VTC_handleSoftkeysAndButton_Q2(pButtonData);
 		break;
 	case SoftKey_Q3:
-		VTC_handleSoftkeysAndButton_Q1(pButtonData);
+		VTC_handleSoftkeysAndButton_Q3(pButtonData);
 		break;
 	case SoftKey_Q4:
-		VTC_handleSoftkeysAndButton_Q1(pButtonData);
+		VTC_handleSoftkeysAndButton_Q4(pButtonData);
 		break;
 	}
 
