@@ -15,7 +15,7 @@
 // TopBottom                              =   8
 // BottomBottom                           =   9
 
-#define ISO_ORIENTATION                       6
+#define ISO_ORIENTATION                       3
 
 // Order Values:
 // TopLeft                                =   0

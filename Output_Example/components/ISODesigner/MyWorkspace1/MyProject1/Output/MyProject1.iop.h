@@ -18,14 +18,7 @@
 #define CylinderIn_20001                  20001
 #define LineAttributes_24000              24000
 #define FillAttributes_25000              25000
-#define ObjectPointer_27000               27000
-#define ObjectPointer_27001               27001
-#define ObjectPointer_27002               27002
-#define ObjectPointer_27003               27003
-#define ObjectPointer_27004               27004
-#define ObjectPointer_27005               27005
-#define ObjectPointer_27006               27006
-#define ObjectPointer_27007               27007
+#define ObjectPointer_NULL                27001
 #define AuxFunction2_Q1                   29001
 #define AuxFunction2_Q2                   29002
 #define AuxFunction2_Q3                   29003

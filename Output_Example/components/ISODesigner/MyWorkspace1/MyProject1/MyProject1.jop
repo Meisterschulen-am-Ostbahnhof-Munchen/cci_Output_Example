@@ -420,7 +420,7 @@
 				</Property>
 			</PropertySheet>
 		</Object>
-		<Object Class="CPointer" Name="Pointer" ObjectName="ObjectPointer_27000" Pinned="FALSE" JVS-ID="27000">
+		<Object Class="CPointer" Name="Pointer" ObjectName="ObjectPointer_NULL" Pinned="FALSE" JVS-ID="27001">
 			<PropertySheet Name="Pointer">
 				<Property Name="Visible">
 					<Value>1</Value>
@@ -438,133 +438,7 @@
 				</Property>
 			</PropertySheet>
 		</Object>
-		<Object Class="CPointer" Name="Pointer" ObjectName="ObjectPointer_27001" Pinned="FALSE" JVS-ID="27001">
-			<PropertySheet Name="Pointer">
-				<Property Name="Visible">
-					<Value>1</Value>
-				</Property>
-				<Property Name="Locked">
-					<Value>0</Value>
-				</Property>
-				<Property Name="Comment">
-					<Value>
-						<![CDATA[AAA=]]>
-					</Value>
-				</Property>
-				<Property Name="Disabled">
-					<Value>0</Value>
-				</Property>
-			</PropertySheet>
-		</Object>
-		<Object Class="CPointer" Name="Pointer" ObjectName="ObjectPointer_27002" Pinned="FALSE" JVS-ID="27002">
-			<PropertySheet Name="Pointer">
-				<Property Name="Visible">
-					<Value>1</Value>
-				</Property>
-				<Property Name="Locked">
-					<Value>0</Value>
-				</Property>
-				<Property Name="Comment">
-					<Value>
-						<![CDATA[AAA=]]>
-					</Value>
-				</Property>
-				<Property Name="Disabled">
-					<Value>0</Value>
-				</Property>
-			</PropertySheet>
-		</Object>
-		<Object Class="CPointer" Name="Pointer" ObjectName="ObjectPointer_27003" Pinned="FALSE" JVS-ID="27003">
-			<PropertySheet Name="Pointer">
-				<Property Name="Visible">
-					<Value>1</Value>
-				</Property>
-				<Property Name="Locked">
-					<Value>0</Value>
-				</Property>
-				<Property Name="Comment">
-					<Value>
-						<![CDATA[AAA=]]>
-					</Value>
-				</Property>
-				<Property Name="Disabled">
-					<Value>0</Value>
-				</Property>
-			</PropertySheet>
-		</Object>
-		<Object Class="CPointer" Name="Pointer" ObjectName="ObjectPointer_27004" Pinned="FALSE" JVS-ID="27004">
-			<PropertySheet Name="Pointer">
-				<Property Name="Visible">
-					<Value>1</Value>
-				</Property>
-				<Property Name="Locked">
-					<Value>0</Value>
-				</Property>
-				<Property Name="Comment">
-					<Value>
-						<![CDATA[AAA=]]>
-					</Value>
-				</Property>
-				<Property Name="Disabled">
-					<Value>0</Value>
-				</Property>
-			</PropertySheet>
-		</Object>
-		<Object Class="CPointer" Name="Pointer" ObjectName="ObjectPointer_27005" Pinned="FALSE" JVS-ID="27005">
-			<PropertySheet Name="Pointer">
-				<Property Name="Visible">
-					<Value>1</Value>
-				</Property>
-				<Property Name="Locked">
-					<Value>0</Value>
-				</Property>
-				<Property Name="Comment">
-					<Value>
-						<![CDATA[AAA=]]>
-					</Value>
-				</Property>
-				<Property Name="Disabled">
-					<Value>0</Value>
-				</Property>
-			</PropertySheet>
-		</Object>
-		<Object Class="CPointer" Name="Pointer" ObjectName="ObjectPointer_27006" Pinned="FALSE" JVS-ID="27006">
-			<PropertySheet Name="Pointer">
-				<Property Name="Visible">
-					<Value>1</Value>
-				</Property>
-				<Property Name="Locked">
-					<Value>0</Value>
-				</Property>
-				<Property Name="Comment">
-					<Value>
-						<![CDATA[AAA=]]>
-					</Value>
-				</Property>
-				<Property Name="Disabled">
-					<Value>0</Value>
-				</Property>
-			</PropertySheet>
-		</Object>
-		<Object Class="CPointer" Name="Pointer" ObjectName="ObjectPointer_27007" Pinned="FALSE" JVS-ID="27007">
-			<PropertySheet Name="Pointer">
-				<Property Name="Visible">
-					<Value>1</Value>
-				</Property>
-				<Property Name="Locked">
-					<Value>0</Value>
-				</Property>
-				<Property Name="Comment">
-					<Value>
-						<![CDATA[AAA=]]>
-					</Value>
-				</Property>
-				<Property Name="Disabled">
-					<Value>0</Value>
-				</Property>
-			</PropertySheet>
-		</Object>
-		<Object Class="CAuxFunction" Name="AuxFunction" ObjectName="AuxFunction2_Q1" Pinned="FALSE" JVS-ID="29001">
+		<Object Class="CAuxFunction" Name="AuxFunction" ObjectName="AuxFunction2_Q1" Pinned="TRUE" JVS-ID="29001">
 			<PropertySheet Name="AuxFunction">
 				<Property Name="BackColor">
 					<Value>16777215</Value>
@@ -615,7 +489,7 @@
 				</Property>
 			</PropertySheet>
 		</Object>
-		<Object Class="CAuxFunction" Name="AuxFunction" ObjectName="AuxFunction2_Q2" Pinned="FALSE" JVS-ID="29002">
+		<Object Class="CAuxFunction" Name="AuxFunction" ObjectName="AuxFunction2_Q2" Pinned="TRUE" JVS-ID="29002">
 			<PropertySheet Name="AuxFunction">
 				<Property Name="BackColor">
 					<Value>16777215</Value>
@@ -666,7 +540,7 @@
 				</Property>
 			</PropertySheet>
 		</Object>
-		<Object Class="CAuxFunction" Name="AuxFunction" ObjectName="AuxFunction2_Q3" Pinned="FALSE" JVS-ID="29003">
+		<Object Class="CAuxFunction" Name="AuxFunction" ObjectName="AuxFunction2_Q3" Pinned="TRUE" JVS-ID="29003">
 			<PropertySheet Name="AuxFunction">
 				<Property Name="BackColor">
 					<Value>16777215</Value>
@@ -717,7 +591,7 @@
 				</Property>
 			</PropertySheet>
 		</Object>
-		<Object Class="CAuxFunction" Name="AuxFunction" ObjectName="AuxFunction2_Q4" Pinned="FALSE" JVS-ID="29004">
+		<Object Class="CAuxFunction" Name="AuxFunction" ObjectName="AuxFunction2_Q4" Pinned="TRUE" JVS-ID="29004">
 			<PropertySheet Name="AuxFunction">
 				<Property Name="BackColor">
 					<Value>16777215</Value>
@@ -779,6 +653,9 @@
 				<Property Name="Name">
 					<Value>Image_1</Value>
 				</Property>
+				<Property Name="TabIndex">
+					<Value>-1</Value>
+				</Property>
 				<Property Name="Transform">
 					<Value>(1.0000000000000000)(0.0000000000000000)(0.0000000000000000)(0.0000000000000000)(1.0000000000000000)(0.0000000000000000)</Value>
 				</Property>
@@ -797,6 +674,9 @@
 				</Property>
 				<Property Name="Name">
 					<Value>Image_1</Value>
+				</Property>
+				<Property Name="TabIndex">
+					<Value>-1</Value>
 				</Property>
 				<Property Name="Transform">
 					<Value>(1.0000000000000000)(0.0000000000000000)(0.0000000000000000)(0.0000000000000000)(1.0000000000000000)(0.0000000000000000)</Value>
@@ -817,6 +697,9 @@
 				<Property Name="Name">
 					<Value>Image_1</Value>
 				</Property>
+				<Property Name="TabIndex">
+					<Value>-1</Value>
+				</Property>
 				<Property Name="Transform">
 					<Value>(1.0000000000000000)(0.0000000000000000)(0.0000000000000000)(0.0000000000000000)(1.0000000000000000)(0.0000000000000000)</Value>
 				</Property>
@@ -835,6 +718,9 @@
 				</Property>
 				<Property Name="Name">
 					<Value>Image_1</Value>
+				</Property>
+				<Property Name="TabIndex">
+					<Value>-1</Value>
 				</Property>
 				<Property Name="Transform">
 					<Value>(1.0000000000000000)(0.0000000000000000)(0.0000000000000000)(0.0000000000000000)(1.0000000000000000)(0.0000000000000000)</Value>
