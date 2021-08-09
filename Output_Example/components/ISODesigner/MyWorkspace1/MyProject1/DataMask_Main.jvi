@@ -11,7 +11,7 @@
 				</Value>
 			</Property>
 			<Property Name="BackColor">
-				<Value>12632256</Value>
+				<Value>12566463</Value>
 			</Property>
 			<Property Name="MaskType">
 				<Value>1</Value>
@@ -56,7 +56,7 @@
 				<Value>-1</Value>
 			</Property>
 			<Property Name="SoftKeyMask">
-				<Value>-1</Value>
+				<Value>4000</Value>
 			</Property>
 			<Property Name="Selectable">
 				<Value>1</Value>

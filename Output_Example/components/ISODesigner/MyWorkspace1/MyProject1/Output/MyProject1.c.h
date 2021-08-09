@@ -2,27 +2,26 @@
 // Do not change!
 
 #define WorkingSet_0_Offset                                     1
-#define DataMask_1000_Offset                                   21
-#define SoftKeyMask_4000_Offset                                29
-#define SoftKey_Q1_Offset                                      57
-#define SoftKey_Q2_Offset                                      64
-#define SoftKey_Q3_Offset                                      71
-#define SoftKey_Q4_Offset                                      78
-#define Rectangle_14000_Offset                                 85
-#define LineAttributes_24000_Offset                            98
-#define FillAttributes_25000_Offset                           106
-#define Generated_Pointer_To_Null_Offset                      114
-#define AuxFunction2_Q1_Offset                                119
-#define AuxFunction2_Q2_Offset                                125
-#define AuxFunction2_Q3_Offset                                131
-#define AuxFunction2_Q4_Offset                                137
+#define DataMask_Main_Offset                                   21
+#define SoftKeyMask_Main_Offset                                29
+#define SoftKey_Q1_Offset                                      47
+#define SoftKey_Q2_Offset                                      60
+#define SoftKey_Q3_Offset                                      73
+#define SoftKey_Q4_Offset                                      86
+#define CylinderOut_20000_Offset                               99
+#define CylinderIn_20001_Offset                               916
+#define ObjectPointer_NULL_Offset                            1733
+#define AuxFunction2_Q1_Offset                               1738
+#define AuxFunction2_Q2_Offset                               1750
+#define AuxFunction2_Q3_Offset                               1762
+#define AuxFunction2_Q4_Offset                               1774
 
 #define ISO_OP_MEMORY_CLASS
 
-#define ISO_OP_MyProject1_Size    143
+#define ISO_OP_MyProject1_Size   1786
 extern const unsigned char ISO_OP_MEMORY_CLASS isoOP_MyProject1[];
 
-#define ISO_OP_MyProject1_ObjectNumber     15
+#define ISO_OP_MyProject1_ObjectNumber     14
 extern const unsigned long ISO_OP_MEMORY_CLASS isoOP_MyProject1_Offset[];
 extern const unsigned long ISO_OP_MEMORY_CLASS isoOP_MyProject1_Offset_Id[];
 #define ISO_OP_MyProject1_Scale_Offset      1

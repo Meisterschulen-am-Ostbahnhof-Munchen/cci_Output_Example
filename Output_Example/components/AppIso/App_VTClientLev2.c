@@ -31,6 +31,8 @@
 
 static const char *TAG = "App_VTClientLev2";
 
+#include "driver/gpio.h"
+
 
 //********************************************************************************************
 // Each command has several Unique Features. here they are encapsulated !
@@ -54,7 +56,7 @@ CommandTranslateObject CommandTranslate[] = {
 
 //make this Defines (Right side)
 const int FIRST_AUX = AuxFunction2_Q1;
-const int  LAST_AUX = AuxFunction2_Q2;
+const int  LAST_AUX = AuxFunction2_Q4;
 //do not Change this.
 const int  NUM_AUX_FUNCTIONS = ((LAST_AUX-FIRST_AUX)+1);
 iso_s32 InputSignalData_old_value1[20] = {AUX_PRESS_OFF};
@@ -136,32 +138,142 @@ void VTC_setPoolReady(const ISOVT_EVENT_DATA_T* psEvData)
 
 	// beim nächsten Anstecken des Gerätes muss der letzte gespeicherte Wert auf das Display gesendet werden.
 
+}
 
+#define GPIO_Q1 GPIO_NUM_19
+#define GPIO_Q2 GPIO_NUM_23
+#define GPIO_Q3 GPIO_NUM_33
+#define GPIO_Q4 GPIO_NUM_25
+
+
+void init_GPIO(void)
+{
+    /* Configure the IOMUX register for pad BLINK_GPIO (some pads are
+       muxed to GPIO on reset already, but some default to other
+       functions and need to be switched to GPIO. Consult the
+       Technical Reference for a list of pads and their default
+       functions.)
+    */
+    gpio_reset_pin(GPIO_Q1);
+    gpio_reset_pin(GPIO_Q2);
+    gpio_reset_pin(GPIO_Q3);
+    gpio_reset_pin(GPIO_Q4);
+    /* Set the GPIO as a push/pull output */
+    gpio_set_direction(GPIO_Q1, GPIO_MODE_OUTPUT);
+    gpio_set_direction(GPIO_Q2, GPIO_MODE_OUTPUT);
+    gpio_set_direction(GPIO_Q3, GPIO_MODE_OUTPUT);
+    gpio_set_direction(GPIO_Q4, GPIO_MODE_OUTPUT);
+
+    gpio_set_level(GPIO_Q1, 0);
+    gpio_set_level(GPIO_Q2, 0);
+    gpio_set_level(GPIO_Q3, 0);
+    gpio_set_level(GPIO_Q4, 0);
 }
 
 
+void VTC_handleSoftkeysAndButton_Q1(const struct ButtonActivation_S *pButtonData) {
+
+	switch (pButtonData->keyActivationCode) {
 
 
+	case BUTTON_STATE_PRESSED:
+	case BUTTON_STATE_HELD:
+		gpio_set_level(GPIO_Q1, 1);
+		break;
+
+
+	case BUTTON_STATE_RELEASED:
+	case BUTTON_STATE_ABORTED:
+		gpio_set_level(GPIO_Q1, 0);
+		break;
+
+
+	}
+}
+
+void VTC_handleSoftkeysAndButton_Q2(const struct ButtonActivation_S *pButtonData) {
+
+	switch (pButtonData->keyActivationCode) {
+
+
+	case BUTTON_STATE_PRESSED:
+	case BUTTON_STATE_HELD:
+		gpio_set_level(GPIO_Q2, 1);
+		break;
+
+
+	case BUTTON_STATE_RELEASED:
+	case BUTTON_STATE_ABORTED:
+		gpio_set_level(GPIO_Q2, 0);
+		break;
+
+
+	}
+}
+
+void VTC_handleSoftkeysAndButton_Q3(const struct ButtonActivation_S *pButtonData) {
+
+	switch (pButtonData->keyActivationCode) {
+
+
+	case BUTTON_STATE_PRESSED:
+	case BUTTON_STATE_HELD:
+		gpio_set_level(GPIO_Q3, 1);
+		break;
+
+
+	case BUTTON_STATE_RELEASED:
+	case BUTTON_STATE_ABORTED:
+		gpio_set_level(GPIO_Q3, 0);
+		break;
+
+
+	}
+}
+
+void VTC_handleSoftkeysAndButton_Q4(const struct ButtonActivation_S *pButtonData) {
+
+	switch (pButtonData->keyActivationCode) {
+
+
+	case BUTTON_STATE_PRESSED:
+	case BUTTON_STATE_HELD:
+		gpio_set_level(GPIO_Q4, 1);
+		break;
+
+
+	case BUTTON_STATE_RELEASED:
+	case BUTTON_STATE_ABORTED:
+		gpio_set_level(GPIO_Q4, 0);
+		break;
+
+
+	}
+}
 
 
 
 void VTC_handleSoftkeysAndButtons(const struct ButtonActivation_S *pButtonData)
 {
-	switch (pButtonData->keyActivationCode)
-	{
-	case BUTTON_STATE_RELEASED:
-		//VTC_handleSoftkeysAndButtons_RELEASED(pButtonData);
+
+	ESP_LOGI(TAG, "press");
+
+	// what button was operated
+	switch (pButtonData->objectIdOfButtonObject) {
+	case SoftKey_Q1:
+		VTC_handleSoftkeysAndButton_Q1(pButtonData);
 		break;
-	case BUTTON_STATE_PRESSED:
-		//BUTTON_InputSignalCallback_PRESSED(pButtonData);
+	case SoftKey_Q2:
+		VTC_handleSoftkeysAndButton_Q2(pButtonData);
 		break;
-	case BUTTON_STATE_HELD:
-		//BUTTON_InputSignalCallback_HELD(pButtonData);
+	case SoftKey_Q3:
+		VTC_handleSoftkeysAndButton_Q3(pButtonData);
 		break;
-	case BUTTON_STATE_ABORTED:
-		//BUTTON_InputSignalCallback_ABORTED(pButtonData);
+	case SoftKey_Q4:
+		VTC_handleSoftkeysAndButton_Q4(pButtonData);
 		break;
 	}
+
 }
 
 void VTC_handleAux(const struct AUX_InputSignalData_T *InputSignalData) {
