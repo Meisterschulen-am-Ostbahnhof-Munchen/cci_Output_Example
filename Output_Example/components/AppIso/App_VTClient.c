@@ -46,6 +46,7 @@
 /* ****************************** global data   *************************** */
 static iso_s16  s16_CfHndVtClient = HANDLE_UNVALID;      // Stored CF handle of VT client
 static iso_u8   u8_CfVtInstance = ISO_INSTANCE_INVALID;  // Instance number of the VT client
+static iso_u8   u8_CfVtInstance2 = ISO_INSTANCE_INVALID;  // Instance number of the VT client
 static iso_u8   u8_CfAuxVtInstance = ISO_INSTANCE_INVALID;  // Instance number of the Aux VT client
 static iso_u8   u8_poolChannel = 0U;   // pool channel for pool to be uploaded
 static iso_u8   u8_poolChannelAux = 0U;   // pool channel for pool to be uploaded to aux function only instance 
@@ -77,23 +78,18 @@ void AppVTClientLogin(iso_s16 s16CfHandle)
    ISO_USER_PARAM_T  userParamVt = ISO_USER_PARAM_DEFAULT;
    uint64_t u64Name = 0;
    iso_u8 u8BootTime = 0;
-   ISO_CF_NAME_T     au8NamePreferredVT = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
-
-   u64Name = getX64("CF-A", "preferredVT", 0xFFFFFFFFFFFFFFFFU);
-   au8NamePreferredVT[0] = (iso_u8)( u64Name        & 0xFFU);
-   au8NamePreferredVT[1] = (iso_u8)((u64Name >>  8) & 0xFFU);
-   au8NamePreferredVT[2] = (iso_u8)((u64Name >> 16) & 0xFFU);
-   au8NamePreferredVT[3] = (iso_u8)((u64Name >> 24) & 0xFFU);
-   au8NamePreferredVT[4] = (iso_u8)((u64Name >> 32) & 0xFFU);
-   au8NamePreferredVT[5] = (iso_u8)((u64Name >> 40) & 0xFFU);
-   au8NamePreferredVT[6] = (iso_u8)((u64Name >> 48) & 0xFFU);
-   au8NamePreferredVT[7] = (iso_u8)((u64Name >> 56) & 0xFFU);
+   iso_u8 au8NamePreferredVT_1[8] = { 0x49, 0x2a, 0x69, 0x2a, 0x00, 0x1d, 0x00, 0xa0 }; // CCI
+   iso_u8 au8NamePreferredVT_2[8] = { 0x49, 0x2a, 0x69, 0x2a, 0x08, 0x1d, 0x00, 0xa0 }; // CCI
 
    u8BootTime = getU8("CF-A", "bootTimeVT", 7u);
 
    // Initialize the VT client instance - Set (EE-stored) NAME and boot time of the preferred VT (in seconds)
    u8_CfVtInstance = IsoVtcCreateInstance(s16CfHandle, userParamVt, CbVtStatus, CbVtMessages, CbVtConnCtrl, CbAuxPrefAssignment,
-                                          CAST_TO_CONST_ISONAME_PTR(&au8NamePreferredVT), u8BootTime);
+                                          CAST_TO_CONST_ISONAME_PTR(&au8NamePreferredVT_1), u8BootTime);
+
+   // Initialize the VT client instance - Set (EE-stored) NAME and boot time of the preferred VT (in seconds)
+   u8_CfVtInstance2 = IsoVtcCreateInstance(s16CfHandle, userParamVt, CbVtStatus, CbVtMessages, CbVtConnCtrl, CbAuxPrefAssignment,
+                                          CAST_TO_CONST_ISONAME_PTR(&au8NamePreferredVT_2), u8BootTime);
    
    // Use preferred assignment callback function, which is called before sending the preferred assignment for the auxiliary functions to the VT
    // Deprecated - already set with IsoVtcCreateInstance(): (void)IsoVtcAuxPrefAssignmentCbSet(u8_CfVtInstance, &CbAuxPrefAssignment);
