@@ -49,6 +49,7 @@ static iso_u8   u8_CfVtInstance = ISO_INSTANCE_INVALID;  // Instance number of t
 static iso_u8   u8_CfVtInstance2 = ISO_INSTANCE_INVALID;  // Instance number of the VT client
 static iso_u8   u8_CfAuxVtInstance = ISO_INSTANCE_INVALID;  // Instance number of the Aux VT client
 static iso_u8   u8_poolChannel = 0U;   // pool channel for pool to be uploaded
+static iso_u8   u8_poolChannel2 = 0U;   // pool channel for pool to be uploaded
 static iso_u8   u8_poolChannelAux = 0U;   // pool channel for pool to be uploaded to aux function only instance 
 /* ****************************** function prototypes ****************************** */
 static void CbVtConnCtrl        (const ISOVT_EVENT_DATA_T* psEvData);
@@ -118,6 +119,15 @@ static void CbVtConnCtrl(const ISOVT_EVENT_DATA_T* psEvData)
             u8_poolChannel = 0;
          }
       }
+      if (psEvData->u8Instance == u8_CfVtInstance2)
+      {  // MASK instance
+         u8_CfVtInstance2 = ISO_INSTANCE_INVALID;
+         if (u8_poolChannel2 > 0u)
+         {
+            poolFree(u8_poolChannel2);
+            u8_poolChannel2 = 0;
+         }
+      }
 
       if (psEvData->u8Instance == u8_CfAuxVtInstance)
       {  // AUX instance
@@ -153,7 +163,14 @@ static void CbVtConnCtrl(const ISOVT_EVENT_DATA_T* psEvData)
       break;
    case IsoEvMaskLoadObjects:
       /* provide pool */
-      AppPoolSettings(psEvData, &u8_poolChannel);
+	  if (psEvData->u8Instance == u8_CfVtInstance)
+	  {
+		  AppPoolSettings(psEvData, &u8_poolChannel);
+	  }
+	  if (psEvData->u8Instance == u8_CfVtInstance2)
+	  {
+		  AppPoolSettings(psEvData, &u8_poolChannel2);
+	  }
       break;
    case IsoEvMaskReadyToStore:
       /* pool upload finished - here we can change objects values which should be stored */
@@ -186,11 +203,23 @@ static void CbVtConnCtrl(const ISOVT_EVENT_DATA_T* psEvData)
       /* fall through */
       /* no break */
    case IsoEvMaskPoolReloadFinished:
-      if (u8_poolChannel > 0u)
-      {
-         poolFree(u8_poolChannel);
-         u8_poolChannel = 0;
-      }
+	  if (psEvData->u8Instance == u8_CfVtInstance)
+	  {
+	      if (u8_poolChannel > 0u)
+	      {
+	         poolFree(u8_poolChannel);
+	         u8_poolChannel = 0;
+	      }
+	  }
+	  if (psEvData->u8Instance == u8_CfVtInstance2)
+	  {
+	      if (u8_poolChannel2 > 0u)
+	      {
+	         poolFree(u8_poolChannel2);
+	         u8_poolChannel2 = 0;
+	      }
+	  }
+
       break;
    case IsoEvMaskTick:  // Cyclic event; Called only after successful login
       AppVTClientDoProcess();   // Sending of commands etc. for mask instance
