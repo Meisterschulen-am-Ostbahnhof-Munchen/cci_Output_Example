@@ -76,7 +76,6 @@ static const char *POOL_FILENAME = "pools/MyProject1.iop";
 void AppVTClientLogin(iso_s16 s16CfHandle)
 {
    ISO_USER_PARAM_T  userParamVt = ISO_USER_PARAM_DEFAULT;
-   uint64_t u64Name = 0;
    iso_u8 u8BootTime = 0;
    iso_u8 au8NamePreferredVT_1[8] = { 0x49, 0x2a, 0x69, 0x2a, 0x00, 0x1d, 0x00, 0xa0 }; // CCI
    iso_u8 au8NamePreferredVT_2[8] = { 0x49, 0x2a, 0x69, 0x2a, 0x08, 0x1d, 0x00, 0xa0 }; // CCI
