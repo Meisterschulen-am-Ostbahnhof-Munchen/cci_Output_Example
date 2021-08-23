@@ -6,19 +6,20 @@
 const unsigned long ISO_OP_MEMORY_CLASS isoOP_MyProject1_Offset[] = {
 	     1,  // WorkingSet_0_Offset
 	    21,  // DataMask_Main_Offset
-	    35,  // SoftKeyMask_Main_Offset
-	    53,  // SoftKey_Q1_Offset
-	    66,  // SoftKey_Q2_Offset
-	    79,  // SoftKey_Q3_Offset
-	    92,  // SoftKey_Q4_Offset
-	   105,  // Rectangle_SENSOR_SMALL_Offset
-	   118,  // CylinderOut_20000_Offset
-	   935,  // CylinderIn_20001_Offset
-	  1752,  // LineAttributes_24000_Offset
-	  1760,  // FillAttributes_HRDarkGrey_Offset
-	  1768,  // ObjectPointer_NULL_Offset
-	  1773,  // AuxFunction2_Q1_Offset
-	  1785,  // AuxFunction2_Q2_Offset
-	  1797,  // AuxFunction2_Q3_Offset
-	  1809,  // AuxFunction2_Q4_Offset
+	    41,  // SoftKeyMask_Main_Offset
+	    59,  // SoftKey_Q1_Offset
+	    72,  // SoftKey_Q2_Offset
+	    85,  // SoftKey_Q3_Offset
+	    98,  // SoftKey_Q4_Offset
+	   111,  // Line_13000_Offset
+	   122,  // Rectangle_SENSOR_SMALL_Offset
+	   135,  // CylinderOut_20000_Offset
+	   952,  // CylinderIn_20001_Offset
+	  1769,  // LineAttributes_24000_Offset
+	  1777,  // FillAttributes_HRDarkGrey_Offset
+	  1785,  // ObjectPointer_NULL_Offset
+	  1790,  // AuxFunction2_Q1_Offset
+	  1802,  // AuxFunction2_Q2_Offset
+	  1814,  // AuxFunction2_Q3_Offset
+	  1826,  // AuxFunction2_Q4_Offset
 };  // isoOP_MyProject1_Offset

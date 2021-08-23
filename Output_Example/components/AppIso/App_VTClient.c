@@ -280,7 +280,7 @@ static void AppPoolSettings(const ISOVT_EVENT_DATA_T* psEvData, iso_u8* pu8PoolC
       0, 0, 0);
 
    // Set pool manipulations
-   VTC_setPoolManipulation( psEvData );
+   //VTC_setPoolManipulation( psEvData );
 }
 
 /* ************************************************************************ */

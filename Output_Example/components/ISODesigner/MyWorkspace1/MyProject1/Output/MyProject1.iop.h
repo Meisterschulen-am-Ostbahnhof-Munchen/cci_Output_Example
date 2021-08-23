@@ -13,6 +13,7 @@
 #define SoftKey_Q2                         5002
 #define SoftKey_Q3                         5003
 #define SoftKey_Q4                         5004
+#define Line_13000                        13000
 #define Rectangle_SENSOR_SMALL            14015
 #define CylinderOut_20000                 20000
 #define CylinderIn_20001                  20001

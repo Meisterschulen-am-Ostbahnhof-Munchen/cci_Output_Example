@@ -250,6 +250,42 @@
 				<Object JVS-ID="4194307"/>
 			</Objects>
 		</Object>
+		<Object Class="CLine" Name="Line" ObjectName="Line_13000" Pinned="FALSE" JVS-ID="13000">
+			<PropertySheet Name="Line">
+				<Property Name="Points">
+					<Value>(0,200)(200,0)</Value>
+				</Property>
+				<Property Name="OriginalPoints">
+					<Value>(0,108)(126,0)</Value>
+				</Property>
+				<Property Name="Transform">
+					<Value>(1.5873015873015872)(0.0000000000000000)(0.0000000000000000)(0.0000000000000000)(1.8518518518518519)(0.0000000000000000)</Value>
+				</Property>
+				<Property Name="PenJoinStyle">
+					<Value>0</Value>
+				</Property>
+				<Property Name="RotationAngle">
+					<Value>0.000000</Value>
+				</Property>
+				<Property Name="Visible">
+					<Value>1</Value>
+				</Property>
+				<Property Name="Locked">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Comment">
+					<Value>
+						<![CDATA[AAA=]]>
+					</Value>
+				</Property>
+				<Property Name="Disabled">
+					<Value>0</Value>
+				</Property>
+			</PropertySheet>
+			<Objects>
+				<Object JVS-ID="24000"/>
+			</Objects>
+		</Object>
 		<Object Class="CRectangle" Name="Rectangle" ObjectName="Rectangle_SENSOR_SMALL" Pinned="FALSE" JVS-ID="14015">
 			<PropertySheet Name="Rectangle">
 				<Property Name="LineSupression">
