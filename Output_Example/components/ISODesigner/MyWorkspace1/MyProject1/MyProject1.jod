@@ -2,7 +2,10 @@
 <JetViewSoft-DefaultObjects Version="3.0" ProductVersion="5.5.1.4367" RelatedObjectPool=".\MyProject1.jop">
 	<Objects>
 		<Object Class="GraphicObject">
-			<Objects/>
+			<Objects>
+				<Object Class="CLineStyle" JVS-ID="24000" ObjectName="LineAttributes_24000"/>
+				<Object Class="CFillStyle" JVS-ID="25010" ObjectName="FillAttributes_HRDarkGrey"/>
+			</Objects>
 		</Object>
 	</Objects>
 </JetViewSoft-DefaultObjects>
