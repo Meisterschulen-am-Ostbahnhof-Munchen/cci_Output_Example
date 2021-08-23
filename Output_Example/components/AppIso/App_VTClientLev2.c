@@ -64,30 +64,73 @@ iso_s32 InputSignalData_old_value1[20] = {AUX_PRESS_OFF};
 
 
 // called from AppPoolSettings()
-void VTC_setPoolManipulation(const ISOVT_EVENT_DATA_T* psEvData)
+void vtcPoolSetPoolManipulation(const ISOVT_EVENT_DATA_T* psEvData)
 {
-   iso_u16  u16DM_Scal  = 10000u;          // Scaling factor * 10000
-   iso_u16  u16SKM_Scal = 10000u;
+	iso_u16  u16DM_Scal = 10000u;           // Scaling factor * 10000
+    iso_u16  u16SKM_Scal = 10000u;
 
-   // ------------------------------------------------------------------------------
-
-   // IsoVtcPoolSetIDRangeMode(u8Instance, 0, 60000, 10000, NoScaling);          // Switch off automatic scaling
-
-   u16DM_Scal = (iso_u16)IsoVtcPoolReadInfo(psEvData->u8Instance, PoolDataMaskScalFaktor);       // Call only after PoolInit !!
-   u16SKM_Scal = (iso_u16)IsoVtcPoolReadInfo(psEvData->u8Instance, PoolSoftKeyMaskScalFaktor);
-
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 5100u, 5300u, u16SKM_Scal, Centering);       // Scale and center Keys
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20700u, 20799u, u16SKM_Scal, Scaling);         // Scale Pictures in keys
+	// ------------------------------------------------------------------------------
 
 
-   // ------------------------------------------------------------------------------
+    u16DM_Scal  = (iso_u16)IsoVtcPoolReadInfo(psEvData->u8Instance, PoolDataMaskScalFaktor);        // Call only after PoolInit !!
+    u16SKM_Scal = (iso_u16)IsoVtcPoolReadInfo(psEvData->u8Instance, PoolSoftKeyMaskScalFaktor);
 
 
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 0u,     0u, u16SKM_Scal, Centering);  // Working set object
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20000u, 20000u, u16SKM_Scal, Scaling);    // Working set designator
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 29000u, 29099u, u16SKM_Scal, Centering);  // Auxiliary function
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20900u, 20999u, u16SKM_Scal, Scaling);    // Auxiliary bitmaps
-   (void)u16DM_Scal;
+    u16DM_Scal /= 2;
+    u16SKM_Scal /= 2;
+
+
+
+	// ------------------------------------------------------------------------------
+
+
+
+
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  1000u,  1999u, u16DM_Scal, Scaling);        // DataMask
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  2000u,  2999u, u16DM_Scal, Scaling);        // AlarmMask
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  3000u,  3499u, u16DM_Scal, Scaling);        // Container
+																								// SoftKeyMask
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  6000u,  6999u, u16DM_Scal, Scaling);        // Button
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  7000u,  7999u, u16DM_Scal, Scaling);        // InputBoolean
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  8000u,  8999u, u16DM_Scal, Scaling);        // InputString
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  9000u,  9999u, u16DM_Scal, Scaling);        // InputNumber
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 10000u, 10999u, u16DM_Scal, Scaling);        // InputList
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 11000u, 11999u, u16DM_Scal, Scaling);        // OutputString
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 12000u, 12999u, u16DM_Scal, Scaling);        // OutputNumber
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 13000u, 13499u, u16DM_Scal, Scaling);        // Line
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 14000u, 14499u, u16DM_Scal, Scaling);        // Rectangle
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 15000u, 15499u, u16DM_Scal, Scaling);        // Ellipse
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 16000u, 16499u, u16DM_Scal, Scaling);        // Polygon
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 17000u, 17499u, u16DM_Scal, Scaling);        // Meter
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 18000u, 18499u, u16DM_Scal, Scaling);        // LinearBargraph
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 19000u, 19499u, u16DM_Scal, Scaling);        // ArchedBargraph
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20000u, 20499u, u16DM_Scal, Scaling);        // PictureGraphic
+																								// ObjectPointer
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 23000u, 23999u, u16DM_Scal, Scaling);        // FontAttributes
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 24000u, 24499u, u16DM_Scal, Scaling);        // LineAttributes
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 25000u, 25499u, u16DM_Scal, Scaling);        // FillAttributes
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 30000u, 30999u, u16DM_Scal, Scaling);        // OutputList
+
+	/*HANDLE SOFTKEY MANIPULATION*/
+
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,     0u,     0u, u16SKM_Scal, Centering);     // Working set object
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  3500u,  3999u, u16SKM_Scal, Scaling);       // Container
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  5000u,  5999u, u16SKM_Scal, Centering);     // Softkeys
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 13500u, 13999u, u16SKM_Scal, Scaling);       // Line
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 14500u, 14999u, u16SKM_Scal, Scaling);       // Rectangle
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 15500u, 15999u, u16SKM_Scal, Scaling);       // Ellipse
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 16500u, 16999u, u16SKM_Scal, Scaling);       // Polygon
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20500u, 20999u, u16SKM_Scal, Scaling);       // Working set bitmaps
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 24500u, 24999u, u16DM_Scal, Scaling);        // LineAttributes
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 25000u, 25499u, u16DM_Scal, Scaling);        // FillAttributes
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 29000u, 29999u, u16SKM_Scal, Centering);     // Auxiliary function
+
+
+
+
+
+
+
 
 
 	if (IsoVtcGetStatusInfo(psEvData->u8Instance, VT_VERSIONNR) == VT_V2_FE)
