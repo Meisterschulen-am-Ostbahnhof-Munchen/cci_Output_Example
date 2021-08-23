@@ -64,7 +64,7 @@ iso_s32 InputSignalData_old_value1[20] = {AUX_PRESS_OFF};
 
 
 // called from AppPoolSettings()
-void vtcPoolSetPoolManipulation(const ISOVT_EVENT_DATA_T* psEvData)
+void VTC_setPoolManipulation(const ISOVT_EVENT_DATA_T* psEvData)
 {
 	iso_u16  u16DM_Scal = 10000u;           // Scaling factor * 10000
     iso_u16  u16SKM_Scal = 10000u;
