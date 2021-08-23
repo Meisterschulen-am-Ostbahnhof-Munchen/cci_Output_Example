@@ -3,7 +3,7 @@
 	<Objects>
 		<Object Class="GraphicObject">
 			<Objects>
-				<Object Class="CLineStyle" JVS-ID="24000" ObjectName="LineAttributes_24000"/>
+				<Object Class="CLineStyle" JVS-ID="24001" ObjectName="LineAttributes_24001"/>
 				<Object Class="CFillStyle" JVS-ID="25010" ObjectName="FillAttributes_HRDarkGrey"/>
 			</Objects>
 		</Object>

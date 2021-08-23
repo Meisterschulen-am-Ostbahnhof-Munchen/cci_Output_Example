@@ -3,29 +3,31 @@
 
 #define WorkingSet_0_Offset                                     1
 #define DataMask_Main_Offset                                   21
-#define SoftKeyMask_Main_Offset                                41
-#define SoftKey_Q1_Offset                                      59
-#define SoftKey_Q2_Offset                                      72
-#define SoftKey_Q3_Offset                                      85
-#define SoftKey_Q4_Offset                                      98
-#define Line_13000_Offset                                     111
-#define Rectangle_SENSOR_SMALL_Offset                         122
-#define CylinderOut_20000_Offset                              135
-#define CylinderIn_20001_Offset                               952
-#define LineAttributes_24000_Offset                          1769
-#define FillAttributes_HRDarkGrey_Offset                     1777
-#define ObjectPointer_NULL_Offset                            1785
-#define AuxFunction2_Q1_Offset                               1790
-#define AuxFunction2_Q2_Offset                               1802
-#define AuxFunction2_Q3_Offset                               1814
-#define AuxFunction2_Q4_Offset                               1826
+#define SoftKeyMask_Main_Offset                                53
+#define SoftKey_Q1_Offset                                      71
+#define SoftKey_Q2_Offset                                      84
+#define SoftKey_Q3_Offset                                      97
+#define SoftKey_Q4_Offset                                     110
+#define Line_13000_Offset                                     123
+#define Rectangle_14000_Offset                                134
+#define Rectangle_SENSOR_SMALL_Offset                         147
+#define CylinderOut_20000_Offset                              160
+#define CylinderIn_20001_Offset                               977
+#define LineAttributes_24000_Offset                          1794
+#define LineAttributes_24001_Offset                          1802
+#define FillAttributes_HRDarkGrey_Offset                     1810
+#define ObjectPointer_NULL_Offset                            1818
+#define AuxFunction2_Q1_Offset                               1823
+#define AuxFunction2_Q2_Offset                               1835
+#define AuxFunction2_Q3_Offset                               1847
+#define AuxFunction2_Q4_Offset                               1859
 
 #define ISO_OP_MEMORY_CLASS
 
-#define ISO_OP_MyProject1_Size   1838
+#define ISO_OP_MyProject1_Size   1871
 extern const unsigned char ISO_OP_MEMORY_CLASS isoOP_MyProject1[];
 
-#define ISO_OP_MyProject1_ObjectNumber     18
+#define ISO_OP_MyProject1_ObjectNumber     20
 extern const unsigned long ISO_OP_MEMORY_CLASS isoOP_MyProject1_Offset[];
 extern const unsigned long ISO_OP_MEMORY_CLASS isoOP_MyProject1_Offset_Id[];
 #define ISO_OP_MyProject1_Scale_Offset      1

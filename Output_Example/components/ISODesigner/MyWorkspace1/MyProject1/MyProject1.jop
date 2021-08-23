@@ -4,13 +4,43 @@
 		<Object Class="CLineStyle" JVS-ID="24000" ObjectName="LineAttributes_24000" Pinned="FALSE">
 			<PropertySheet Name="LineStyle" ID="68696">
 				<Property Name="Color">
-					<Value>10066329</Value>
+					<Value>3342591</Value>
 				</Property>
 				<Property Name="Style">
 					<Value>7</Value>
 				</Property>
 				<Property Name="Width">
 					<Value>1</Value>
+				</Property>
+				<Property Name="Transparent">
+					<Value>0</Value>
+				</Property>
+				<Property Name="LineArtBits">
+					<Value>0000000000000000</Value>
+				</Property>
+				<Property Name="CapStyle">
+					<Value>0</Value>
+				</Property>
+				<Property Name="CapStyle">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Comment">
+					<Value>
+						<![CDATA[AAA=]]>
+					</Value>
+				</Property>
+			</PropertySheet>
+		</Object>
+		<Object Class="CLineStyle" JVS-ID="24001" ObjectName="LineAttributes_24001" Pinned="FALSE">
+			<PropertySheet Name="LineStyle" ID="68696">
+				<Property Name="Color">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Style">
+					<Value>7</Value>
+				</Property>
+				<Property Name="Width">
+					<Value>2</Value>
 				</Property>
 				<Property Name="Transparent">
 					<Value>0</Value>
@@ -286,6 +316,46 @@
 				<Object JVS-ID="24000"/>
 			</Objects>
 		</Object>
+		<Object Class="CRectangle" Name="Rectangle" ObjectName="Rectangle_14000" Pinned="FALSE" JVS-ID="14000">
+			<PropertySheet Name="Rectangle">
+				<Property Name="LineSupression">
+					<Value>0000</Value>
+				</Property>
+				<Property Name="RoundEdgeRadius">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Points">
+					<Value>(0,0)(90,0)(90,72)(0,72)</Value>
+				</Property>
+				<Property Name="OriginalPoints">
+					<Value>(0,0)(90,0)(90,72)(0,72)</Value>
+				</Property>
+				<Property Name="Width">
+					<Value>90</Value>
+				</Property>
+				<Property Name="Height">
+					<Value>72</Value>
+				</Property>
+				<Property Name="Visible">
+					<Value>1</Value>
+				</Property>
+				<Property Name="Locked">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Comment">
+					<Value>
+						<![CDATA[AAA=]]>
+					</Value>
+				</Property>
+				<Property Name="Disabled">
+					<Value>0</Value>
+				</Property>
+			</PropertySheet>
+			<Objects>
+				<Object JVS-ID="25010"/>
+				<Object JVS-ID="24001"/>
+			</Objects>
+		</Object>
 		<Object Class="CRectangle" Name="Rectangle" ObjectName="Rectangle_SENSOR_SMALL" Pinned="FALSE" JVS-ID="14015">
 			<PropertySheet Name="Rectangle">
 				<Property Name="LineSupression">
@@ -295,19 +365,19 @@
 					<Value>0</Value>
 				</Property>
 				<Property Name="Points">
-					<Value>(0,0)(210,0)(210,120)(0,120)</Value>
+					<Value>(0,0)(126,0)(126,72)(0,72)</Value>
 				</Property>
 				<Property Name="OriginalPoints">
 					<Value>(0,0)(170,0)(170,114)(0,114)</Value>
 				</Property>
 				<Property Name="Transform">
-					<Value>(1.2352941036224365)(0.0000000000000000)(0.0000000000000000)(0.0000000000000000)(1.0526316165924072)(0.0000000000000000)</Value>
+					<Value>(0.7411764705882353)(0.0000000000000000)(0.0000000000000000)(0.0000000000000000)(0.6315789473684211)(0.0000000000000000)</Value>
 				</Property>
 				<Property Name="Width">
-					<Value>210</Value>
+					<Value>126</Value>
 				</Property>
 				<Property Name="Height">
-					<Value>120</Value>
+					<Value>72</Value>
 				</Property>
 				<Property Name="Visible">
 					<Value>1</Value>

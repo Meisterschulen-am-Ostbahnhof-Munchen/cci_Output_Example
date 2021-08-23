@@ -14,10 +14,12 @@
 #define SoftKey_Q3                         5003
 #define SoftKey_Q4                         5004
 #define Line_13000                        13000
+#define Rectangle_14000                   14000
 #define Rectangle_SENSOR_SMALL            14015
 #define CylinderOut_20000                 20000
 #define CylinderIn_20001                  20001
 #define LineAttributes_24000              24000
+#define LineAttributes_24001              24001
 #define FillAttributes_HRDarkGrey         25010
 #define ObjectPointer_NULL                27001
 #define AuxFunction2_Q1                   29001

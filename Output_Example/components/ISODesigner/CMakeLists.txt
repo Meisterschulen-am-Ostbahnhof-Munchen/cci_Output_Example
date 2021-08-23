@@ -19,7 +19,7 @@ set(COMPONENT_PRIV_REQUIRES
 register_component()
 
 
-# After build, copy the archive file and header file to parent example directory's main component
+# After build, copy the iop file to spiffs
 add_custom_command(TARGET ${COMPONENT_LIB}
                   POST_BUILD
                   COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/components/ISODesigner/MyWorkspace1/MyProject1/Output/MyProject1.iop ${CMAKE_SOURCE_DIR}/spiffs_image/pools
