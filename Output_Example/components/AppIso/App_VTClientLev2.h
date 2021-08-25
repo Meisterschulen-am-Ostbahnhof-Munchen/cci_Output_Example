@@ -31,6 +31,8 @@ void VTC_handleSoftkeysAndButtons(const struct ButtonActivation_S *pButtonData);
 void VTC_handleAux(const struct AUX_InputSignalData_T *InputSignalData);
 void VTC_handleNumericValues(const struct InputNumber_S * pInputNumberData);
 
+void AppVTClientDoProcess( void );
+
 
 /* ************************************************************************ */
 #ifdef __cplusplus

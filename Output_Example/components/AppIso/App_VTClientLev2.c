@@ -63,6 +63,20 @@ iso_s32 InputSignalData_old_value1[20] = {AUX_PRESS_OFF};
 
 
 
+
+
+
+/* ************************************************************************ */
+void AppVTClientDoProcess( void )
+{  /* Cyclic VTClient function */
+
+
+
+
+
+}
+
+
 // called from AppPoolSettings()
 void VTC_setPoolManipulation(const ISOVT_EVENT_DATA_T* psEvData)
 {

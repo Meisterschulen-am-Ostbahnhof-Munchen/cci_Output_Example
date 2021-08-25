@@ -56,7 +56,6 @@ static void CbVtMessages        (const ISOVT_MSG_STA_T * pIsoMsgSta);
 static void CbAuxPrefAssignment (const VT_AUX_PREF_PARAM_T* psParams, VT_AUXAPP_T asAuxAss[], iso_s16* ps16MaxNumberOfAssigns);
 
 static void AppPoolSettings(const ISOVT_EVENT_DATA_T* psEvData, iso_u8* pu8PoolChannel);
-static void AppVTClientDoProcess(void);
 
 static void VTC_SetObjValuesBeforeStore(iso_u8 u8Instance);
 
@@ -241,11 +240,6 @@ static void CbVtConnCtrl(const ISOVT_EVENT_DATA_T* psEvData)
    }
 }
 
-/* ************************************************************************ */
-static void AppVTClientDoProcess( void )
-{  /* Cyclic VTClient function */
-
-}
 
 
 
