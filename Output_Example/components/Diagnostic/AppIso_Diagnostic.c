@@ -240,8 +240,11 @@ iso_u8* getComplianceCertificate(iso_u16* length)
 #define TECU_SERVER_CF		13 //Basic tractor ECU (server)
 #define TECU_CLIENT_CF		14 //Basic tractor ECU implement set (client)
 
-
+#if defined(_LAY10_)
 extern iso_u8 u8NumberSectionsImplement;
+#else
+iso_u8 u8NumberSectionsImplement = 16u;
+#endif
 
 static iso_u8* getFuncChar(iso_u16* length)
 {

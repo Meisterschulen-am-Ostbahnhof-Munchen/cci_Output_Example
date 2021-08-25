@@ -222,9 +222,17 @@ void AppVTClientDoProcess(const ISOVT_EVENT_DATA_T* psEvData)
 
 
 	if (CYCLE_4A.Q0)
-		IsoVtcCmd_CtrlAudioSignal(psEvData->u8Instance, 0, 700, 500, 0);
+	{
+		IsoVtcCmd_CtrlAudioSignal(psEvData->u8Instance, 1, 700, 500, 0);
+		ESP_LOGI(TAG, "STATE Q0 %i ", CYCLE_4A.STATE);
+	}
 	if (CYCLE_4A.Q1)
-		IsoVtcCmd_CtrlAudioSignal(psEvData->u8Instance, 0, 700, 500, 0);
+	{
+		IsoVtcCmd_CtrlAudioSignal(psEvData->u8Instance, 1, 940, 1000, 0);
+		ESP_LOGI(TAG, "STATE Q1 %i ", CYCLE_4A.STATE);
+	}
+
+
 
 
 }
