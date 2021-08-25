@@ -219,7 +219,7 @@ void AppVTClientDoProcess(const ISOVT_EVENT_DATA_T* psEvData)
 	CYCLE_4A(I1);
 	if (CYCLE_4A.Q0) IsoVtcCmd_CtrlAudioSignal(psEvData->u8Instance, 1, 700,  500, 0);
 	if (CYCLE_4A.Q1) IsoVtcCmd_CtrlAudioSignal(psEvData->u8Instance, 1, 940, 1000, 0);
-
+	if (CYCLE_4A.Q2) IsoVtcCmd_CtrlAudioSignal(psEvData->u8Instance, 1, 1030, 500, 0);
 
 
 
