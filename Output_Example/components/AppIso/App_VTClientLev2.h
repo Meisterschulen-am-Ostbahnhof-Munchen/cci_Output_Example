@@ -31,7 +31,12 @@ void VTC_handleSoftkeysAndButtons(const struct ButtonActivation_S *pButtonData);
 void VTC_handleAux(const struct AUX_InputSignalData_T *InputSignalData);
 void VTC_handleNumericValues(const struct InputNumber_S * pInputNumberData);
 
-void AppVTClientDoProcess( void );
+void AppVTClientDoProcess(const ISOVT_EVENT_DATA_T* psEvData);
+
+void init_GPIO(void);
+
+extern const int FIRST_AUX;
+extern const int  LAST_AUX;
 
 
 /* ************************************************************************ */

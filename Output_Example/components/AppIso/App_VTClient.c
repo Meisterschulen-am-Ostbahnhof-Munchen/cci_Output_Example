@@ -197,7 +197,7 @@ static void CbVtConnCtrl(const ISOVT_EVENT_DATA_T* psEvData)
       }
       break;
    case IsoEvMaskTick:  // Cyclic event; Called only after successful login
-      AppVTClientDoProcess();   // Sending of commands etc. for mask instance
+      AppVTClientDoProcess(psEvData);   // Sending of commands etc. for mask instance
       break;
    case IsoEvMaskLoginAborted:
       // Login failed - application has to decide if login shall be repeated and how often

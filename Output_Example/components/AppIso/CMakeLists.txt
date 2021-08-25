@@ -7,7 +7,7 @@ set(COMPONENT_SRCS
   "App_Main.c"
   "App_VTClient.c"
   "App_TCClient.c"
-  "App_VTClientLev2.c"
+  "App_VTClientLev2.cpp"
   "AppMemAccess.cpp"
 )
 
@@ -30,6 +30,7 @@ set(COMPONENT_PRIV_REQUIRES
 	AppCanDriverEsp32
 	Samples
 	SerialNumber
+	PlcLib
 )
 
 register_component()

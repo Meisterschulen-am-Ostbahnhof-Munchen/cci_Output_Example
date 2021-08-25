@@ -34,6 +34,18 @@ static const char *TAG = "App_VTClientLev2";
 #include "driver/gpio.h"
 
 
+
+
+
+
+
+#include "TimeLib.h"
+#include "StandardLib.h"
+#include "UtilLib.h"
+#include "ExtraLib.h"
+#include "BasicLib.h"
+
+
 //********************************************************************************************
 // Each command has several Unique Features. here they are encapsulated !
 //********************************************************************************************
@@ -66,15 +78,6 @@ iso_s32 InputSignalData_old_value1[20] = {AUX_PRESS_OFF};
 
 
 
-/* ************************************************************************ */
-void AppVTClientDoProcess( void )
-{  /* Cyclic VTClient function */
-
-
-
-
-
-}
 
 
 // called from AppPoolSettings()
@@ -154,6 +157,10 @@ void VTC_setPoolReady(const ISOVT_EVENT_DATA_T* psEvData)
 
 }
 
+
+
+#define BUTTON_I1 GPIO_NUM_32		// Pin 32.
+#define BUTTON_I2 GPIO_NUM_39		// Pin 39.
 #define GPIO_Q1 GPIO_NUM_19
 #define GPIO_Q2 GPIO_NUM_23
 #define GPIO_Q3 GPIO_NUM_33
@@ -172,16 +179,54 @@ void init_GPIO(void)
     gpio_reset_pin(GPIO_Q2);
     gpio_reset_pin(GPIO_Q3);
     gpio_reset_pin(GPIO_Q4);
+    gpio_reset_pin(BUTTON_I1);
+    gpio_reset_pin(BUTTON_I2);
     /* Set the GPIO as a push/pull output */
     gpio_set_direction(GPIO_Q1, GPIO_MODE_OUTPUT);
     gpio_set_direction(GPIO_Q2, GPIO_MODE_OUTPUT);
     gpio_set_direction(GPIO_Q3, GPIO_MODE_OUTPUT);
     gpio_set_direction(GPIO_Q4, GPIO_MODE_OUTPUT);
-
+    gpio_set_direction(BUTTON_I1, GPIO_MODE_INPUT);
+    gpio_set_direction(BUTTON_I2, GPIO_MODE_INPUT);
     gpio_set_level(GPIO_Q1, 0);
     gpio_set_level(GPIO_Q2, 0);
     gpio_set_level(GPIO_Q3, 0);
     gpio_set_level(GPIO_Q4, 0);
+}
+
+
+
+static int I1 = 0;
+static int I2 = 0;
+CYCLE_4_TAP CYCLE_4A;
+
+/* ************************************************************************ */
+void AppVTClientDoProcess(const ISOVT_EVENT_DATA_T* psEvData)
+{  /* Cyclic VTClient function */
+
+
+
+	// to achieve this:
+
+	//IsoVtcCmd_CtrlAudioSignal(u8Instance, 0, 700, 500, 0);
+	//vTaskDelay(pdMS_TO_TICKS(500));
+	//IsoVtcCmd_CtrlAudioSignal(u8Instance, 0, 940, 1000, 0);
+
+
+	I1 = !gpio_get_level(BUTTON_I1);
+	I2 = !gpio_get_level(BUTTON_I2);
+
+
+
+	CYCLE_4A(I1);
+
+
+	if (CYCLE_4A.Q0)
+		IsoVtcCmd_CtrlAudioSignal(psEvData->u8Instance, 0, 700, 500, 0);
+	if (CYCLE_4A.Q1)
+		IsoVtcCmd_CtrlAudioSignal(psEvData->u8Instance, 0, 700, 500, 0);
+
+
 }
 
 
