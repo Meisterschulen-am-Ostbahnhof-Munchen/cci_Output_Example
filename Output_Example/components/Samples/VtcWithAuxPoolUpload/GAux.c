@@ -10,11 +10,6 @@
 
 
 
-/* info to ISO Object Pool */
-#define ISO_DESIGNATOR_WIDTH 60
-#define ISO_DESIGNATOR_HEIGHT 32
-#define ISO_MASK_SIZE 200
-
 #define USERPARAM_GAUX   ((ISO_USER_PARAM_TYPE)0xFF00u)
 
 static const iso_u8 abPoolVersion[] = "WHEPSga   Ext_Implement Vers5000";
