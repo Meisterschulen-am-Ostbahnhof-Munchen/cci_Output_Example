@@ -8,10 +8,10 @@
 #define SoftKey_Q2_Offset                                      60
 #define SoftKey_Q3_Offset                                      73
 #define SoftKey_Q4_Offset                                      86
-#define CylinderOut64_20000_Offset                             99
-#define CylinderIn64_20001_Offset                             628
-#define CylinderIn_20002_Offset                              1157
-#define CylinderOut_20001_Offset                             1974
+#define CylinderOut_20001_Offset                               99
+#define CylinderIn_20002_Offset                               916
+#define CylinderOut64_20901_Offset                           1733
+#define CylinderIn64_20902_Offset                            2262
 #define ObjectPointer_NULL_Offset                            2791
 #define AuxFunction2_Q1_Offset                               2796
 #define AuxFunction2_Q2_Offset                               2808

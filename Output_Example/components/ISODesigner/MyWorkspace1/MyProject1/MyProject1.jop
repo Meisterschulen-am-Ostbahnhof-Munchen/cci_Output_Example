@@ -178,11 +178,11 @@
 				<Object JVS-ID="4194307"/>
 			</Objects>
 		</Object>
-		<Object Class="CImage" Name="Image" ObjectName="CylinderOut64_20000" Pinned="FALSE" JVS-ID="20000">
+		<Object Class="CImage" Name="Image" ObjectName="CylinderOut_20001" Pinned="FALSE" JVS-ID="20001">
 			<PropertySheet Name="Image">
 				<Property Name="Path">
 					<Value>
-						<![CDATA[.\icon\CylinderOut64.bmp]]>
+						<![CDATA[.\icon\CylinderOut.bmp]]>
 					</Value>
 				</Property>
 				<Property Name="ResourceID">
@@ -213,19 +213,19 @@
 					<Value>0</Value>
 				</Property>
 				<Property Name="RealImageWidth">
-					<Value>64</Value>
+					<Value>80</Value>
 				</Property>
 				<Property Name="RealImageHeight">
-					<Value>64</Value>
+					<Value>80</Value>
 				</Property>
 				<Property Name="RotationAngle">
 					<Value>0.000000</Value>
 				</Property>
 				<Property Name="Width">
-					<Value>64</Value>
+					<Value>80</Value>
 				</Property>
 				<Property Name="Height">
-					<Value>64</Value>
+					<Value>80</Value>
 				</Property>
 				<Property Name="Visible">
 					<Value>1</Value>
@@ -243,72 +243,7 @@
 				</Property>
 			</PropertySheet>
 		</Object>
-		<Object Class="CImage" Name="Image" ObjectName="CylinderIn64_20001" Pinned="FALSE" JVS-ID="20001">
-			<PropertySheet Name="Image">
-				<Property Name="Path">
-					<Value>
-						<![CDATA[.\icon\CylinderIn64.bmp]]>
-					</Value>
-				</Property>
-				<Property Name="ResourceID">
-					<Value/>
-				</Property>
-				<Property Name="Retain Aspect Ratio">
-					<Value>1</Value>
-				</Property>
-				<Property Name="Transparency">
-					<Value>1</Value>
-				</Property>
-				<Property Name="TransColor">
-					<Value>16777215</Value>
-				</Property>
-				<Property Name="ControlType">
-					<Value>0</Value>
-				</Property>
-				<Property Name="BitPerPixel">
-					<Value>1</Value>
-				</Property>
-				<Property Name="IsFlashing">
-					<Value>0</Value>
-				</Property>
-				<Property Name="Encoding">
-					<Value>0</Value>
-				</Property>
-				<Property Name="Extended">
-					<Value>0</Value>
-				</Property>
-				<Property Name="RealImageWidth">
-					<Value>64</Value>
-				</Property>
-				<Property Name="RealImageHeight">
-					<Value>64</Value>
-				</Property>
-				<Property Name="RotationAngle">
-					<Value>0.000000</Value>
-				</Property>
-				<Property Name="Width">
-					<Value>64</Value>
-				</Property>
-				<Property Name="Height">
-					<Value>64</Value>
-				</Property>
-				<Property Name="Visible">
-					<Value>1</Value>
-				</Property>
-				<Property Name="Locked">
-					<Value>0</Value>
-				</Property>
-				<Property Name="Comment">
-					<Value>
-						<![CDATA[AAA=]]>
-					</Value>
-				</Property>
-				<Property Name="Disabled">
-					<Value>0</Value>
-				</Property>
-			</PropertySheet>
-		</Object>
-		<Object Class="CImage" Name="Image" ObjectName="CylinderIn_20002" Pinned="FALSE" JVS-ID="20901">
+		<Object Class="CImage" Name="Image" ObjectName="CylinderIn_20002" Pinned="FALSE" JVS-ID="20002">
 			<PropertySheet Name="Image">
 				<Property Name="Path">
 					<Value>
@@ -373,11 +308,11 @@
 				</Property>
 			</PropertySheet>
 		</Object>
-		<Object Class="CImage" Name="Image" ObjectName="CylinderOut_20001" Pinned="FALSE" JVS-ID="20902">
+		<Object Class="CImage" Name="Image" ObjectName="CylinderOut64_20901" Pinned="FALSE" JVS-ID="20901">
 			<PropertySheet Name="Image">
 				<Property Name="Path">
 					<Value>
-						<![CDATA[.\icon\CylinderOut.bmp]]>
+						<![CDATA[.\icon\CylinderOut64.bmp]]>
 					</Value>
 				</Property>
 				<Property Name="ResourceID">
@@ -408,19 +343,84 @@
 					<Value>0</Value>
 				</Property>
 				<Property Name="RealImageWidth">
-					<Value>80</Value>
+					<Value>64</Value>
 				</Property>
 				<Property Name="RealImageHeight">
-					<Value>80</Value>
+					<Value>64</Value>
 				</Property>
 				<Property Name="RotationAngle">
 					<Value>0.000000</Value>
 				</Property>
 				<Property Name="Width">
-					<Value>80</Value>
+					<Value>64</Value>
 				</Property>
 				<Property Name="Height">
-					<Value>80</Value>
+					<Value>64</Value>
+				</Property>
+				<Property Name="Visible">
+					<Value>1</Value>
+				</Property>
+				<Property Name="Locked">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Comment">
+					<Value>
+						<![CDATA[AAA=]]>
+					</Value>
+				</Property>
+				<Property Name="Disabled">
+					<Value>0</Value>
+				</Property>
+			</PropertySheet>
+		</Object>
+		<Object Class="CImage" Name="Image" ObjectName="CylinderIn64_20902" Pinned="FALSE" JVS-ID="20902">
+			<PropertySheet Name="Image">
+				<Property Name="Path">
+					<Value>
+						<![CDATA[.\icon\CylinderIn64.bmp]]>
+					</Value>
+				</Property>
+				<Property Name="ResourceID">
+					<Value/>
+				</Property>
+				<Property Name="Retain Aspect Ratio">
+					<Value>1</Value>
+				</Property>
+				<Property Name="Transparency">
+					<Value>1</Value>
+				</Property>
+				<Property Name="TransColor">
+					<Value>16777215</Value>
+				</Property>
+				<Property Name="ControlType">
+					<Value>0</Value>
+				</Property>
+				<Property Name="BitPerPixel">
+					<Value>1</Value>
+				</Property>
+				<Property Name="IsFlashing">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Encoding">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Extended">
+					<Value>0</Value>
+				</Property>
+				<Property Name="RealImageWidth">
+					<Value>64</Value>
+				</Property>
+				<Property Name="RealImageHeight">
+					<Value>64</Value>
+				</Property>
+				<Property Name="RotationAngle">
+					<Value>0.000000</Value>
+				</Property>
+				<Property Name="Width">
+					<Value>64</Value>
+				</Property>
+				<Property Name="Height">
+					<Value>64</Value>
 				</Property>
 				<Property Name="Visible">
 					<Value>1</Value>
@@ -691,7 +691,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20902"/>
+				<Object JVS-ID="20001"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194305">
@@ -713,7 +713,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20901"/>
+				<Object JVS-ID="20002"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194306">
@@ -735,7 +735,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20902"/>
+				<Object JVS-ID="20001"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194307">
@@ -757,7 +757,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20901"/>
+				<Object JVS-ID="20002"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194308">
@@ -779,7 +779,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20902"/>
+				<Object JVS-ID="20001"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194309">
@@ -801,7 +801,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20902"/>
+				<Object JVS-ID="20001"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194310">
@@ -823,7 +823,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20901"/>
+				<Object JVS-ID="20002"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194311">
@@ -845,7 +845,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20901"/>
+				<Object JVS-ID="20002"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_2" ObjectName="" Pinned="FALSE" JVS-ID="4194312">
@@ -859,12 +859,15 @@
 				<Property Name="Name">
 					<Value>Image_2</Value>
 				</Property>
+				<Property Name="TabIndex">
+					<Value>-1</Value>
+				</Property>
 				<Property Name="Transform">
 					<Value>(1.0000000000000000)(0.0000000000000000)(0.0000000000000000)(0.0000000000000000)(1.0000000000000000)(0.0000000000000000)</Value>
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20000"/>
+				<Object JVS-ID="20901"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_2" ObjectName="" Pinned="FALSE" JVS-ID="4194313">
@@ -878,12 +881,15 @@
 				<Property Name="Name">
 					<Value>Image_2</Value>
 				</Property>
+				<Property Name="TabIndex">
+					<Value>-1</Value>
+				</Property>
 				<Property Name="Transform">
 					<Value>(1.0000000000000000)(0.0000000000000000)(0.0000000000000000)(0.0000000000000000)(1.0000000000000000)(0.0000000000000000)</Value>
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20001"/>
+				<Object JVS-ID="20902"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_2" ObjectName="" Pinned="FALSE" JVS-ID="4194314">
@@ -897,12 +903,15 @@
 				<Property Name="Name">
 					<Value>Image_2</Value>
 				</Property>
+				<Property Name="TabIndex">
+					<Value>-1</Value>
+				</Property>
 				<Property Name="Transform">
 					<Value>(1.0000000000000000)(0.0000000000000000)(0.0000000000000000)(0.0000000000000000)(1.0000000000000000)(0.0000000000000000)</Value>
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20000"/>
+				<Object JVS-ID="20901"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_2" ObjectName="" Pinned="FALSE" JVS-ID="4194315">
@@ -916,12 +925,15 @@
 				<Property Name="Name">
 					<Value>Image_2</Value>
 				</Property>
+				<Property Name="TabIndex">
+					<Value>-1</Value>
+				</Property>
 				<Property Name="Transform">
 					<Value>(1.0000000000000000)(0.0000000000000000)(0.0000000000000000)(0.0000000000000000)(1.0000000000000000)(0.0000000000000000)</Value>
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20001"/>
+				<Object JVS-ID="20902"/>
 			</Objects>
 		</Object>
 	</Objects>
