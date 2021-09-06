@@ -11,8 +11,8 @@ const unsigned long ISO_OP_MEMORY_CLASS isoOP_MyProject1_Offset[] = {
 	    60,  // SoftKey_Q2_Offset
 	    73,  // SoftKey_Q3_Offset
 	    86,  // SoftKey_Q4_Offset
-	    99,  // CylinderOut_20000_Offset
-	   916,  // CylinderIn_20001_Offset
+	    99,  // CylinderIn_20902_Offset
+	   916,  // CylinderOut_20901_Offset
 	  1733,  // ObjectPointer_NULL_Offset
 	  1738,  // AuxFunction2_Q1_Offset
 	  1750,  // AuxFunction2_Q2_Offset

@@ -178,11 +178,11 @@
 				<Object JVS-ID="4194307"/>
 			</Objects>
 		</Object>
-		<Object Class="CImage" Name="Image" ObjectName="CylinderOut_20000" Pinned="FALSE" JVS-ID="20000">
+		<Object Class="CImage" Name="Image" ObjectName="CylinderIn_20902" Pinned="FALSE" JVS-ID="20901">
 			<PropertySheet Name="Image">
 				<Property Name="Path">
 					<Value>
-						<![CDATA[.\icon\CylinderOut.bmp]]>
+						<![CDATA[.\icon\CylinderIn.bmp]]>
 					</Value>
 				</Property>
 				<Property Name="ResourceID">
@@ -243,11 +243,11 @@
 				</Property>
 			</PropertySheet>
 		</Object>
-		<Object Class="CImage" Name="Image" ObjectName="CylinderIn_20001" Pinned="FALSE" JVS-ID="20001">
+		<Object Class="CImage" Name="Image" ObjectName="CylinderOut_20901" Pinned="FALSE" JVS-ID="20902">
 			<PropertySheet Name="Image">
 				<Property Name="Path">
 					<Value>
-						<![CDATA[.\icon\CylinderIn.bmp]]>
+						<![CDATA[.\icon\CylinderOut.bmp]]>
 					</Value>
 				</Property>
 				<Property Name="ResourceID">
@@ -561,7 +561,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20000"/>
+				<Object JVS-ID="20902"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194305">
@@ -583,7 +583,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20001"/>
+				<Object JVS-ID="20901"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194306">
@@ -605,7 +605,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20000"/>
+				<Object JVS-ID="20902"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194307">
@@ -627,7 +627,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20001"/>
+				<Object JVS-ID="20901"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194308">
@@ -649,7 +649,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20000"/>
+				<Object JVS-ID="20902"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194309">
@@ -671,7 +671,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20000"/>
+				<Object JVS-ID="20902"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194310">
@@ -693,7 +693,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20001"/>
+				<Object JVS-ID="20901"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194311">
@@ -715,7 +715,7 @@
 				</Property>
 			</PropertySheet>
 			<Objects>
-				<Object JVS-ID="20001"/>
+				<Object JVS-ID="20901"/>
 			</Objects>
 		</Object>
 	</Objects>
