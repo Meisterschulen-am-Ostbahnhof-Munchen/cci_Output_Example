@@ -158,7 +158,7 @@ static iso_s16 CbVtcGAuxEvent(const IsoVtcGAux_ConnEv_Ts *pEvent)
       SetGAuxPool(pEvent);
       break;
    case IsoVtcAux_EvActivated:
-      #if 1
+      #if 0
       {  /* command sample: set aux function background color */
          iso_u16 u16ObjID;
          for (u16ObjID = 29002u; u16ObjID <= 29004; u16ObjID++)
