@@ -6,6 +6,9 @@
 #include "IsoClientsApi.h"
 #include "GAux.h"
 
+#include "MyProject1.iop.h"
+#include "MyProject1.c.h"
+
 #if defined(_LAY6_) && defined(ISO_VTC_GRAPHIC_AUX)
 
 
