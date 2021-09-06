@@ -5,13 +5,14 @@
 #include "IsoVtcApi.h"
 #include "IsoClientsApi.h"
 #include "GAux.h"
+#include "esp_log.h"
 
 #include "MyProject1.iop.h"
 #include "MyProject1.c.h"
 
 #if defined(_LAY6_) && defined(ISO_VTC_GRAPHIC_AUX)
 
-
+static const char *TAG = "GAux";
 
 #define USERPARAM_GAUX   ((ISO_USER_PARAM_TYPE)0xFF00u)
 
@@ -186,7 +187,8 @@ static iso_s16 CbVtcGAuxEvent(const IsoVtcGAux_ConnEv_Ts *pEvent)
 /* ************************************************************************ */
 static void SetGAuxPool(const IsoVtcGAux_ConnEv_Ts * pEvent)
 {
-    iso_u16 u16SKM_Scal = 0u, u16DMScal = 0u;           // Scaling factor * 10000
+    iso_u16 u16SKM_Scal = 0u;         // Scaling factor * 10000
+    iso_u16 u16DM_Scal = 0u;           // Scaling factor * 10000
     ISOVT_POOL_TRANSFER_MODE_e eTransferMode;
 
     (void)IsoVtcGAux_PoolSetVersionLabel(pEvent->u8ConnHnd, 32u, abPoolVersion);
@@ -212,12 +214,16 @@ static void SetGAuxPool(const IsoVtcGAux_ConnEv_Ts * pEvent)
     (void)IsoVtcGAux_PoolLoad(pEvent->u8ConnHnd, eTransferMode, pu8PoolData, u32PoolSize, 200UL, 0u, CbVtcGAuxPoolEvent);
 
     /* set manipulations */
-    u16DMScal = (iso_u16)IsoVtcGAux_PoolReadInfo(pEvent->u8ConnHnd, PoolDataMaskScalFaktor);          // Calling after PoolInit!!!
+    u16DM_Scal = (iso_u16)IsoVtcGAux_PoolReadInfo(pEvent->u8ConnHnd, PoolDataMaskScalFaktor);          // Calling after PoolInit!!!
     u16SKM_Scal = (iso_u16)IsoVtcGAux_PoolReadInfo(pEvent->u8ConnHnd, PoolSoftKeyMaskScalFaktor);
+
+
+    ESP_LOGW(TAG, "PoolDataMaskScalFaktor    =  %i", u16DM_Scal);
+    ESP_LOGW(TAG, "PoolSoftKeyMaskScalFaktor =  %i", u16SKM_Scal);
 
     (void)IsoVtcGAux_PoolSetIDRangeMode(pEvent->u8ConnHnd, 29000, 29099, u16SKM_Scal, Centering);  // Auxiliary function
     (void)IsoVtcGAux_PoolSetIDRangeMode(pEvent->u8ConnHnd, 20900, 20999, u16SKM_Scal, Scaling);    // Pictures in auxiliaries
-    (void)u16DMScal;
+    (void)u16DM_Scal;
 }
 
 /* ************************************************************************ */
