@@ -13,8 +13,10 @@
 #define SoftKey_Q2                         5002
 #define SoftKey_Q3                         5003
 #define SoftKey_Q4                         5004
-#define CylinderIn_20902                  20901
-#define CylinderOut_20901                 20902
+#define CylinderOut64_20000               20000
+#define CylinderIn64_20001                20001
+#define CylinderIn_20002                  20901
+#define CylinderOut_20001                 20902
 #define ObjectPointer_NULL                27001
 #define AuxFunction2_Q1                   29001
 #define AuxFunction2_Q2                   29002
