@@ -59,16 +59,20 @@ typedef struct {
 } CommandTranslateObject;
 
 CommandTranslateObject CommandTranslate[] = {
-	{ AuxFunction2_Q1,		SoftKey_Q1		}, //	0
-	{ AuxFunction2_Q2,		SoftKey_Q2		}, //	1
-	{ AuxFunction2_Q3,		SoftKey_Q3		}, //	2
-	{ AuxFunction2_Q4,		SoftKey_Q4		} //	3
+	{ AuxFunction2_Q1,			SoftKey_Q1		}, //	0
+	{ AuxFunction2_Q2,			SoftKey_Q2		}, //	1
+	{ AuxFunction2_Q3,			SoftKey_Q3		}, //	2
+	{ AuxFunction2_Q4,			SoftKey_Q4		}, //	3
+	{ AuxFunction2_29005,		SoftKey_5000		}, //	4
+	{ AuxFunction2_29006,		SoftKey_5005		}, //	5
+	{ AuxFunction2_29007,		SoftKey_5006		}, //	6
+	{ AuxFunction2_29008,		SoftKey_5007		} //	7
 };
 
 
 //make this Defines (Right side)
 const int FIRST_AUX = AuxFunction2_Q1;
-const int  LAST_AUX = AuxFunction2_Q4;
+const int  LAST_AUX = AuxFunction2_29008;
 //do not Change this.
 const int  NUM_AUX_FUNCTIONS = ((LAST_AUX-FIRST_AUX)+1);
 iso_s32 InputSignalData_old_value1[20] = {AUX_PRESS_OFF};
