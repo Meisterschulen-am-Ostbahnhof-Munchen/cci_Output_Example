@@ -317,7 +317,7 @@ This define replaces RAMSIZEPOOL */
 /*! \brief Maximal number of manipulation ranges
 \details Maximum number of ranges given for pool manipulation
 ( Number of calling #IsoVtcPoolSetIDRangeMode() ) */
-#define ISO_NO_SCALING_ELEMENTS_MAX   (30u)
+#define ISO_NO_SCALING_ELEMENTS_MAX   (60u)
 
 /*! \brief Maximum number of objects loaded, manipulated .. to RAM during one loop
 \details Number of manipulated objects during one machine loop - default is 4 */
