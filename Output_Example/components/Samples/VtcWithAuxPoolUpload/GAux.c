@@ -16,7 +16,7 @@ static const char *TAG = "GAux";
 
 #define USERPARAM_GAUX   ((ISO_USER_PARAM_TYPE)0xFF00u)
 
-static const iso_u8 abPoolVersion[] = "WHEPSga   Ext_Implement Vers5000";
+static const iso_u8 abPoolVersion[] = "";
 
 /* pointer to the pool data which should be uploaded */
 static iso_u8 *   pu8PoolData = 0;
@@ -217,6 +217,10 @@ static void SetGAuxPool(const IsoVtcGAux_ConnEv_Ts * pEvent)
     u16DM_Scal = (iso_u16)IsoVtcGAux_PoolReadInfo(pEvent->u8ConnHnd, PoolDataMaskScalFaktor);          // Calling after PoolInit!!!
     u16SKM_Scal = (iso_u16)IsoVtcGAux_PoolReadInfo(pEvent->u8ConnHnd, PoolSoftKeyMaskScalFaktor);
 
+
+
+    u16DM_Scal /= 2;
+    u16SKM_Scal /= 2;
 
     ESP_LOGW(TAG, "PoolDataMaskScalFaktor    =  %i", u16DM_Scal);
     ESP_LOGW(TAG, "PoolSoftKeyMaskScalFaktor =  %i", u16SKM_Scal);
