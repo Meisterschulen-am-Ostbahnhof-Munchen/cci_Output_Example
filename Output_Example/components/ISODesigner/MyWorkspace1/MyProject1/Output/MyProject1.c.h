@@ -3,27 +3,49 @@
 
 #define WorkingSet_0_Offset                                     1
 #define DataMask_Main_Offset                                   21
-#define SoftKeyMask_Main_Offset                                29
-#define SoftKey_Q1_Offset                                      47
-#define SoftKey_Q2_Offset                                      60
-#define SoftKey_Q3_Offset                                      73
-#define SoftKey_Q4_Offset                                      86
-#define CylinderOut_20001_Offset                               99
-#define CylinderIn_20002_Offset                               916
-#define CylinderOut64_20901_Offset                           1733
-#define CylinderIn64_20902_Offset                            2262
-#define ObjectPointer_NULL_Offset                            2791
-#define AuxFunction2_Q1_Offset                               2796
-#define AuxFunction2_Q2_Offset                               2808
-#define AuxFunction2_Q3_Offset                               2820
-#define AuxFunction2_Q4_Offset                               2832
+#define SoftKeyMask_Main_Offset                                53
+#define SoftKey_5000_Offset                                    83
+#define SoftKey_Q1_Offset                                      96
+#define SoftKey_Q2_Offset                                     109
+#define SoftKey_Q3_Offset                                     122
+#define SoftKey_Q4_Offset                                     135
+#define SoftKey_5005_Offset                                   148
+#define SoftKey_5006_Offset                                   161
+#define SoftKey_5007_Offset                                   174
+#define _80_20000_Offset                                      187
+#define CylinderOut_20001_Offset                             1004
+#define CylinderIn_20002_Offset                              1821
+#define _64_20003_Offset                                     2638
+#define _40_20004_Offset                                     3167
+#define _32_20005_Offset                                     3384
+#define _80_20006_Offset                                     3529
+#define _64_20007_Offset                                     4346
+#define _40_20008_Offset                                     4875
+#define _32_20009_Offset                                     5092
+#define _80_20010_Offset                                     5237
+#define _64_20011_Offset                                     6054
+#define _40_20012_Offset                                     6583
+#define _32_20013_Offset                                     6800
+#define CylinderOut64_20901_Offset                           6945
+#define CylinderIn64_20902_Offset                            7474
+#define ObjectPointer_27000_Offset                           8003
+#define ObjectPointer_NULL_Offset                            8008
+#define ObjectPointer_27002_Offset                           8013
+#define AuxFunction2_Q1_Offset                               8018
+#define AuxFunction2_Q2_Offset                               8030
+#define AuxFunction2_Q3_Offset                               8042
+#define AuxFunction2_Q4_Offset                               8054
+#define AuxFunction2_29005_Offset                            8066
+#define AuxFunction2_29006_Offset                            8078
+#define AuxFunction2_29007_Offset                            8090
+#define AuxFunction2_29008_Offset                            8102
 
 #define ISO_OP_MEMORY_CLASS
 
-#define ISO_OP_MyProject1_Size   2844
+#define ISO_OP_MyProject1_Size   8114
 extern const unsigned char ISO_OP_MEMORY_CLASS isoOP_MyProject1[];
 
-#define ISO_OP_MyProject1_ObjectNumber     16
+#define ISO_OP_MyProject1_ObjectNumber     38
 extern const unsigned long ISO_OP_MEMORY_CLASS isoOP_MyProject1_Offset[];
 extern const unsigned long ISO_OP_MEMORY_CLASS isoOP_MyProject1_Offset_Id[];
 #define ISO_OP_MyProject1_Scale_Offset      1
