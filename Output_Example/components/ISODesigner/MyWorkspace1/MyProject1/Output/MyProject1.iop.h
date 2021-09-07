@@ -27,12 +27,12 @@
 #define _64_20007                         20007
 #define _40_20008                         20008
 #define _32_20009                         20009
-#define _80_20010                         20010
-#define _64_20011                         20011
-#define _40_20012                         20012
-#define _32_20013                         20013
 #define CylinderOut64_20901               20901
 #define CylinderIn64_20902                20902
+#define _80_20910                         20910
+#define _64_20911                         20911
+#define _40_20912                         20912
+#define _32_20913                         20913
 #define ObjectPointer_27000               27000
 #define ObjectPointer_NULL                27001
 #define ObjectPointer_27002               27002

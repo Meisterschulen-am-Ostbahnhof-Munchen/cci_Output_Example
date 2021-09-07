@@ -25,12 +25,12 @@ const unsigned long ISO_OP_MEMORY_CLASS isoOP_MyProject1_Offset_Id[] = {
 	  4346,  // _64_20007_Offset
 	  4875,  // _40_20008_Offset
 	  5092,  // _32_20009_Offset
-	  5237,  // _80_20010_Offset
-	  6054,  // _64_20011_Offset
-	  6583,  // _40_20012_Offset
-	  6800,  // _32_20013_Offset
-	  6945,  // CylinderOut64_20901_Offset
-	  7474,  // CylinderIn64_20902_Offset
+	  5237,  // CylinderOut64_20901_Offset
+	  5766,  // CylinderIn64_20902_Offset
+	  6295,  // _80_20910_Offset
+	  7112,  // _64_20911_Offset
+	  7641,  // _40_20912_Offset
+	  7858,  // _32_20913_Offset
 	  8003,  // ObjectPointer_27000_Offset
 	  8008,  // ObjectPointer_NULL_Offset
 	  8013,  // ObjectPointer_27002_Offset
