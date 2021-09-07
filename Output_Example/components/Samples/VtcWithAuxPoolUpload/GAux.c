@@ -16,7 +16,7 @@ static const char *TAG = "GAux";
 
 #define USERPARAM_GAUX   ((ISO_USER_PARAM_TYPE)0xFF00u)
 
-static const iso_u8 abPoolVersion[] = "       ";
+static const iso_u8 abPoolVersion[] = ISO_VERSION_LABEL;
 
 /* pointer to the pool data which should be uploaded */
 static iso_u8 *   pu8PoolData = 0;
