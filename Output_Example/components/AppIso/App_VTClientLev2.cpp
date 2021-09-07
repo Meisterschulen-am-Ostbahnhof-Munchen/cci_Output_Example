@@ -151,8 +151,8 @@ void VTC_setPoolManipulation(const ISOVT_EVENT_DATA_T* psEvData)
 	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 15500u, 15999u, u16SKM_Scal, Scaling);       // Ellipse
 	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 16500u, 16999u, u16SKM_Scal, Scaling);       // Polygon
 	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20500u, 20999u, u16SKM_Scal, Scaling);       // Working set bitmaps
-	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 24500u, 24900u, u16DM_Scal, Scaling);        // LineAttributes
-	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 25000u, 25499u, u16DM_Scal, Scaling);        // FillAttributes
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 24500u, 24900u, u16SKM_Scal, Scaling);        // LineAttributes
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 25000u, 25499u, u16SKM_Scal, Scaling);        // FillAttributes
 	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 29000u, 29999u, u16SKM_Scal, Centering);     // Auxiliary function
 
 
