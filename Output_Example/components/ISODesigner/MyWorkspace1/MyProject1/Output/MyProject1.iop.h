@@ -29,6 +29,7 @@
 #define _32_20509                         20509
 #define CylinderOut64_20901               20901
 #define CylinderIn64_20902                20902
+#define _25_20903                         20903
 #define _80_20910                         20910
 #define _64_20911                         20911
 #define _40_20912                         20912
@@ -44,3 +45,4 @@
 #define AuxFunction2_29006                29006
 #define AuxFunction2_29007                29007
 #define AuxFunction2_29008                29008
+#define AuxFunction2_29009                29009

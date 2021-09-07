@@ -219,15 +219,17 @@ static void SetGAuxPool(const IsoVtcGAux_ConnEv_Ts * pEvent)
 
 
 
-    u16DM_Scal /= 2;
-    u16SKM_Scal /= 2;
+    u16DM_Scal /= 10;
+    u16SKM_Scal /= 10;
 
     ESP_LOGW(TAG, "PoolDataMaskScalFaktor    =  %i", u16DM_Scal);
     ESP_LOGW(TAG, "PoolSoftKeyMaskScalFaktor =  %i", u16SKM_Scal);
 
-    (void)IsoVtcGAux_PoolSetIDRangeMode(pEvent->u8ConnHnd, 29000, 29099, u16SKM_Scal, Centering);  // Auxiliary function
+    (void)IsoVtcGAux_PoolSetIDRangeMode(pEvent->u8ConnHnd, 29000, 29999, u16SKM_Scal, Centering);  // Auxiliary function
+    (void)IsoVtcGAux_PoolSetIDRangeMode(pEvent->u8ConnHnd, 20000, 20899, u16SKM_Scal, NotLoad);    // Pictures in auxiliaries
     (void)IsoVtcGAux_PoolSetIDRangeMode(pEvent->u8ConnHnd, 20900, 20999, u16SKM_Scal, Scaling);    // Pictures in auxiliaries
-    (void)u16DM_Scal;
+
+
 }
 
 /* ************************************************************************ */

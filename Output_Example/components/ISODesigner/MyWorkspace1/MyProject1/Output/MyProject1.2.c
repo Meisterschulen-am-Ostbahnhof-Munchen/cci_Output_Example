@@ -27,19 +27,21 @@ const unsigned long ISO_OP_MEMORY_CLASS isoOP_MyProject1_Offset[] = {
 	  5092,  // _32_20509_Offset
 	  5237,  // CylinderOut64_20901_Offset
 	  5766,  // CylinderIn64_20902_Offset
-	  6295,  // _80_20910_Offset
-	  7112,  // _64_20911_Offset
-	  7641,  // _40_20912_Offset
-	  7858,  // _32_20913_Offset
-	  8003,  // ObjectPointer_27000_Offset
-	  8008,  // ObjectPointer_NULL_Offset
-	  8013,  // ObjectPointer_27002_Offset
-	  8018,  // AuxFunction2_Q1_Offset
-	  8030,  // AuxFunction2_Q2_Offset
-	  8042,  // AuxFunction2_Q3_Offset
-	  8054,  // AuxFunction2_Q4_Offset
-	  8066,  // AuxFunction2_29005_Offset
-	  8078,  // AuxFunction2_29006_Offset
-	  8090,  // AuxFunction2_29007_Offset
-	  8102,  // AuxFunction2_29008_Offset
+	  6295,  // _25_20903_Offset
+	  6412,  // _80_20910_Offset
+	  7229,  // _64_20911_Offset
+	  7758,  // _40_20912_Offset
+	  7975,  // _32_20913_Offset
+	  8120,  // ObjectPointer_27000_Offset
+	  8125,  // ObjectPointer_NULL_Offset
+	  8130,  // ObjectPointer_27002_Offset
+	  8135,  // AuxFunction2_Q1_Offset
+	  8147,  // AuxFunction2_Q2_Offset
+	  8159,  // AuxFunction2_Q3_Offset
+	  8171,  // AuxFunction2_Q4_Offset
+	  8183,  // AuxFunction2_29005_Offset
+	  8195,  // AuxFunction2_29006_Offset
+	  8207,  // AuxFunction2_29007_Offset
+	  8219,  // AuxFunction2_29008_Offset
+	  8231,  // AuxFunction2_29009_Offset
 };  // isoOP_MyProject1_Offset

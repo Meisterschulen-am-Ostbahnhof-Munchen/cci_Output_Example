@@ -1090,6 +1090,71 @@
 				</Property>
 			</PropertySheet>
 		</Object>
+		<Object Class="CImage" Name="Image" ObjectName="_25_20903" Pinned="FALSE" JVS-ID="20903">
+			<PropertySheet Name="Image">
+				<Property Name="Path">
+					<Value>
+						<![CDATA[.\icon\25.bmp]]>
+					</Value>
+				</Property>
+				<Property Name="ResourceID">
+					<Value/>
+				</Property>
+				<Property Name="Retain Aspect Ratio">
+					<Value>1</Value>
+				</Property>
+				<Property Name="Transparency">
+					<Value>0</Value>
+				</Property>
+				<Property Name="TransColor">
+					<Value>16777215</Value>
+				</Property>
+				<Property Name="ControlType">
+					<Value>0</Value>
+				</Property>
+				<Property Name="BitPerPixel">
+					<Value>1</Value>
+				</Property>
+				<Property Name="IsFlashing">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Encoding">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Extended">
+					<Value>0</Value>
+				</Property>
+				<Property Name="RealImageWidth">
+					<Value>25</Value>
+				</Property>
+				<Property Name="RealImageHeight">
+					<Value>25</Value>
+				</Property>
+				<Property Name="RotationAngle">
+					<Value>0.000000</Value>
+				</Property>
+				<Property Name="Width">
+					<Value>25</Value>
+				</Property>
+				<Property Name="Height">
+					<Value>25</Value>
+				</Property>
+				<Property Name="Visible">
+					<Value>1</Value>
+				</Property>
+				<Property Name="Locked">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Comment">
+					<Value>
+						<![CDATA[AAA=]]>
+					</Value>
+				</Property>
+				<Property Name="Disabled">
+					<Value>0</Value>
+				</Property>
+			</PropertySheet>
+		</Object>
 		<Object Class="CImage" Name="Image" ObjectName="_80_20910" Pinned="FALSE" JVS-ID="20910">
 			<PropertySheet Name="Image">
 				<Property Name="Path">
@@ -1836,6 +1901,60 @@
 				<Object JVS-ID="4194329"/>
 			</Objects>
 		</Object>
+		<Object Class="CAuxFunction" Name="AuxFunction" ObjectName="AuxFunction2_29009" Pinned="TRUE" JVS-ID="29009">
+			<PropertySheet Name="AuxFunction">
+				<Property Name="BackColor">
+					<Value>16777215</Value>
+				</Property>
+				<Property Name="FunctionType">
+					<Value>0</Value>
+				</Property>
+				<Property Name="FunctionType2">
+					<Value>2</Value>
+				</Property>
+				<Property Name="CriticalControl">
+					<Value>0</Value>
+				</Property>
+				<Property Name="AssignmentLock">
+					<Value>0</Value>
+				</Property>
+				<Property Name="SingleAssignment">
+					<Value>1</Value>
+				</Property>
+				<Property Name="ISO-Version">
+					<Value>ISO_2009</Value>
+				</Property>
+				<Property Name="EnableExport">
+					<Value>0</Value>
+				</Property>
+				<Property Name="FileName">
+					<Value/>
+				</Property>
+				<Property Name="Width">
+					<Value>80</Value>
+				</Property>
+				<Property Name="Height">
+					<Value>80</Value>
+				</Property>
+				<Property Name="Visible">
+					<Value>1</Value>
+				</Property>
+				<Property Name="Locked">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Comment">
+					<Value>
+						<![CDATA[AAA=]]>
+					</Value>
+				</Property>
+				<Property Name="Disabled">
+					<Value>0</Value>
+				</Property>
+			</PropertySheet>
+			<Objects>
+				<Object JVS-ID="4194317"/>
+			</Objects>
+		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194304">
 			<PropertySheet Name="Proxy">
 				<Property Name="Top">
@@ -2098,6 +2217,25 @@
 			</PropertySheet>
 			<Objects>
 				<Object JVS-ID="20902"/>
+			</Objects>
+		</Object>
+		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194317">
+			<PropertySheet Name="Proxy">
+				<Property Name="Top">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Left">
+					<Value>0</Value>
+				</Property>
+				<Property Name="Name">
+					<Value>Image_1</Value>
+				</Property>
+				<Property Name="Transform">
+					<Value>(1.0000000000000000)(0.0000000000000000)(0.0000000000000000)(0.0000000000000000)(1.0000000000000000)(0.0000000000000000)</Value>
+				</Property>
+			</PropertySheet>
+			<Objects>
+				<Object JVS-ID="20903"/>
 			</Objects>
 		</Object>
 		<Object Class="CProxy" Name="Image_1" ObjectName="" Pinned="FALSE" JVS-ID="4194320">

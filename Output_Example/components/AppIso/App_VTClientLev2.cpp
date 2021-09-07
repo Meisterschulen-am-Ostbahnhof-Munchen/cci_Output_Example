@@ -92,7 +92,7 @@ void VTC_setPoolManipulation(const ISOVT_EVENT_DATA_T* psEvData)
 
    // ------------------------------------------------------------------------------
 
-   // IsoVtcPoolSetIDRangeMode(u8Instance, 0, 60000, 10000, NoScaling);          // Switch off automatic scaling
+
 
    u16DM_Scal = (iso_u16)IsoVtcPoolReadInfo(psEvData->u8Instance, PoolDataMaskScalFaktor);       // Call only after PoolInit !!
    u16SKM_Scal = (iso_u16)IsoVtcPoolReadInfo(psEvData->u8Instance, PoolSoftKeyMaskScalFaktor);
@@ -104,11 +104,6 @@ void VTC_setPoolManipulation(const ISOVT_EVENT_DATA_T* psEvData)
 
    ESP_LOGW(TAG, "PoolDataMaskScalFaktor    =  %i", u16DM_Scal);
    ESP_LOGW(TAG, "PoolSoftKeyMaskScalFaktor =  %i", u16SKM_Scal);
-
-
-
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 5100u, 5300u, u16SKM_Scal, Centering);       // Scale and center Keys
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20700u, 20799u, u16SKM_Scal, Scaling);         // Scale Pictures in keys
 
 
 	// ------------------------------------------------------------------------------

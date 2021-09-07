@@ -24,28 +24,30 @@
 #define _32_20509_Offset                                     5092
 #define CylinderOut64_20901_Offset                           5237
 #define CylinderIn64_20902_Offset                            5766
-#define _80_20910_Offset                                     6295
-#define _64_20911_Offset                                     7112
-#define _40_20912_Offset                                     7641
-#define _32_20913_Offset                                     7858
-#define ObjectPointer_27000_Offset                           8003
-#define ObjectPointer_NULL_Offset                            8008
-#define ObjectPointer_27002_Offset                           8013
-#define AuxFunction2_Q1_Offset                               8018
-#define AuxFunction2_Q2_Offset                               8030
-#define AuxFunction2_Q3_Offset                               8042
-#define AuxFunction2_Q4_Offset                               8054
-#define AuxFunction2_29005_Offset                            8066
-#define AuxFunction2_29006_Offset                            8078
-#define AuxFunction2_29007_Offset                            8090
-#define AuxFunction2_29008_Offset                            8102
+#define _25_20903_Offset                                     6295
+#define _80_20910_Offset                                     6412
+#define _64_20911_Offset                                     7229
+#define _40_20912_Offset                                     7758
+#define _32_20913_Offset                                     7975
+#define ObjectPointer_27000_Offset                           8120
+#define ObjectPointer_NULL_Offset                            8125
+#define ObjectPointer_27002_Offset                           8130
+#define AuxFunction2_Q1_Offset                               8135
+#define AuxFunction2_Q2_Offset                               8147
+#define AuxFunction2_Q3_Offset                               8159
+#define AuxFunction2_Q4_Offset                               8171
+#define AuxFunction2_29005_Offset                            8183
+#define AuxFunction2_29006_Offset                            8195
+#define AuxFunction2_29007_Offset                            8207
+#define AuxFunction2_29008_Offset                            8219
+#define AuxFunction2_29009_Offset                            8231
 
 #define ISO_OP_MEMORY_CLASS
 
-#define ISO_OP_MyProject1_Size   8114
+#define ISO_OP_MyProject1_Size   8243
 extern const unsigned char ISO_OP_MEMORY_CLASS isoOP_MyProject1[];
 
-#define ISO_OP_MyProject1_ObjectNumber     38
+#define ISO_OP_MyProject1_ObjectNumber     40
 extern const unsigned long ISO_OP_MEMORY_CLASS isoOP_MyProject1_Offset[];
 extern const unsigned long ISO_OP_MEMORY_CLASS isoOP_MyProject1_Offset_Id[];
 #define ISO_OP_MyProject1_Scale_Offset      1
