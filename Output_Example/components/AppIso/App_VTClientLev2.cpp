@@ -66,13 +66,14 @@ CommandTranslateObject CommandTranslate[] = {
 	{ AuxFunction2_29005,		SoftKey_5000		}, //	4
 	{ AuxFunction2_29006,		SoftKey_5005		}, //	5
 	{ AuxFunction2_29007,		SoftKey_5006		}, //	6
-	{ AuxFunction2_29008,		SoftKey_5007		} //	7
+	{ AuxFunction2_29008,		SoftKey_5007		}, //	7
+	{ AuxFunction2_29009,		SoftKey_5007		} //	8
 };
 
 
 //make this Defines (Right side)
 const int FIRST_AUX = AuxFunction2_Q1;
-const int  LAST_AUX = AuxFunction2_29008;
+const int  LAST_AUX = AuxFunction2_29009;
 //do not Change this.
 const int  NUM_AUX_FUNCTIONS = ((LAST_AUX-FIRST_AUX)+1);
 iso_s32 InputSignalData_old_value1[20] = {AUX_PRESS_OFF};
