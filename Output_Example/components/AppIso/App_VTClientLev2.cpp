@@ -34,6 +34,18 @@ static const char *TAG = "App_VTClientLev2";
 #include "driver/gpio.h"
 
 
+
+
+
+
+
+#include "TimeLib.h"
+#include "StandardLib.h"
+#include "UtilLib.h"
+#include "ExtraLib.h"
+#include "BasicLib.h"
+
+
 //********************************************************************************************
 // Each command has several Unique Features. here they are encapsulated !
 //********************************************************************************************
@@ -47,19 +59,29 @@ typedef struct {
 } CommandTranslateObject;
 
 CommandTranslateObject CommandTranslate[] = {
-	{ AuxFunction2_Q1,		SoftKey_Q1		}, //	0
-	{ AuxFunction2_Q2,		SoftKey_Q2		}, //	1
-	{ AuxFunction2_Q3,		SoftKey_Q3		}, //	2
-	{ AuxFunction2_Q4,		SoftKey_Q4		} //	3
+	{ AuxFunction2_Q1,			SoftKey_Q1		}, //	0
+	{ AuxFunction2_Q2,			SoftKey_Q2		}, //	1
+	{ AuxFunction2_Q3,			SoftKey_Q3		}, //	2
+	{ AuxFunction2_Q4,			SoftKey_Q4		}, //	3
+	{ AuxFunction2_29005,		SoftKey_5000		}, //	4
+	{ AuxFunction2_29006,		SoftKey_5005		}, //	5
+	{ AuxFunction2_29007,		SoftKey_5006		}, //	6
+	{ AuxFunction2_29008,		SoftKey_5007		}, //	7
+	{ AuxFunction2_29009,		SoftKey_5007		} //	8
 };
 
 
 //make this Defines (Right side)
 const int FIRST_AUX = AuxFunction2_Q1;
-const int  LAST_AUX = AuxFunction2_Q4;
+const int  LAST_AUX = AuxFunction2_29009;
 //do not Change this.
 const int  NUM_AUX_FUNCTIONS = ((LAST_AUX-FIRST_AUX)+1);
 iso_s32 InputSignalData_old_value1[20] = {AUX_PRESS_OFF};
+
+
+
+
+
 
 
 
@@ -71,23 +93,70 @@ void VTC_setPoolManipulation(const ISOVT_EVENT_DATA_T* psEvData)
 
    // ------------------------------------------------------------------------------
 
-   // IsoVtcPoolSetIDRangeMode(u8Instance, 0, 60000, 10000, NoScaling);          // Switch off automatic scaling
+
 
    u16DM_Scal = (iso_u16)IsoVtcPoolReadInfo(psEvData->u8Instance, PoolDataMaskScalFaktor);       // Call only after PoolInit !!
    u16SKM_Scal = (iso_u16)IsoVtcPoolReadInfo(psEvData->u8Instance, PoolSoftKeyMaskScalFaktor);
 
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 5100u, 5300u, u16SKM_Scal, Centering);       // Scale and center Keys
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20700u, 20799u, u16SKM_Scal, Scaling);         // Scale Pictures in keys
 
 
-   // ------------------------------------------------------------------------------
+   u16DM_Scal /= 2;
+   u16SKM_Scal /= 2;
+
+   ESP_LOGW(TAG, "PoolDataMaskScalFaktor    =  %i", u16DM_Scal);
+   ESP_LOGW(TAG, "PoolSoftKeyMaskScalFaktor =  %i", u16SKM_Scal);
 
 
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 0u,     0u, u16SKM_Scal, Centering);  // Working set object
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20000u, 20000u, u16SKM_Scal, Scaling);    // Working set designator
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 29000u, 29099u, u16SKM_Scal, Centering);  // Auxiliary function
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20900u, 20999u, u16SKM_Scal, Scaling);    // Auxiliary bitmaps
-   (void)u16DM_Scal;
+	// ------------------------------------------------------------------------------
+
+
+
+
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  1000u,  1999u, u16DM_Scal, Scaling);        // DataMask
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  2000u,  2999u, u16DM_Scal, Scaling);        // AlarmMask
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  3000u,  3499u, u16DM_Scal, Scaling);        // Container
+																								// SoftKeyMask
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  6000u,  6999u, u16DM_Scal, Scaling);        // Button
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  7000u,  7999u, u16DM_Scal, Scaling);        // InputBoolean
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  8000u,  8999u, u16DM_Scal, Scaling);        // InputString
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  9000u,  9999u, u16DM_Scal, Scaling);        // InputNumber
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 10000u, 10999u, u16DM_Scal, Scaling);        // InputList
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 11000u, 11999u, u16DM_Scal, Scaling);        // OutputString
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 12000u, 12999u, u16DM_Scal, Scaling);        // OutputNumber
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 13000u, 13499u, u16DM_Scal, Scaling);        // Line
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 14000u, 14499u, u16DM_Scal, Scaling);        // Rectangle
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 15000u, 15499u, u16DM_Scal, Scaling);        // Ellipse
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 16000u, 16499u, u16DM_Scal, Scaling);        // Polygon
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 17000u, 17499u, u16DM_Scal, Scaling);        // Meter
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 18000u, 18499u, u16DM_Scal, Scaling);        // LinearBargraph
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 19000u, 19499u, u16DM_Scal, Scaling);        // ArchedBargraph
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20000u, 20499u, u16DM_Scal, Scaling);        // PictureGraphic
+																								// ObjectPointer
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 23000u, 23999u, u16DM_Scal, Scaling);        // FontAttributes
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 24000u, 24499u, u16DM_Scal, Scaling);        // LineAttributes
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 25000u, 25499u, u16DM_Scal, Scaling);        // FillAttributes
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 30000u, 30999u, u16DM_Scal, Scaling);        // OutputList
+
+	/*HANDLE SOFTKEY MANIPULATION*/
+
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,     0u,     0u, u16SKM_Scal, Centering);     // Working set object
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  3500u,  3999u, u16SKM_Scal, Scaling);       // Container
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance,  5000u,  5999u, u16SKM_Scal, Centering);     // Softkeys
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 13500u, 13999u, u16SKM_Scal, Scaling);       // Line
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 14500u, 14999u, u16SKM_Scal, Scaling);       // Rectangle
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 15500u, 15999u, u16SKM_Scal, Scaling);       // Ellipse
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 16500u, 16999u, u16SKM_Scal, Scaling);       // Polygon
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20500u, 20999u, u16SKM_Scal, Scaling);       // Working set bitmaps
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 24500u, 24900u, u16SKM_Scal, Scaling);       // LineAttributes
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 25000u, 25499u, u16SKM_Scal, Scaling);       // FillAttributes
+	IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 29000u, 29999u, u16SKM_Scal, Centering);     // Auxiliary function
+
+
+	// LineAttributes	24901-24999 is unscaled !
+
+
+
+
 
 
 	if (IsoVtcGetStatusInfo(psEvData->u8Instance, VT_VERSIONNR) == VT_V2_FE)
@@ -140,6 +209,10 @@ void VTC_setPoolReady(const ISOVT_EVENT_DATA_T* psEvData)
 
 }
 
+
+
+#define BUTTON_I1 GPIO_NUM_32		// Pin 32.
+#define BUTTON_I2 GPIO_NUM_39		// Pin 39.
 #define GPIO_Q1 GPIO_NUM_19
 #define GPIO_Q2 GPIO_NUM_23
 #define GPIO_Q3 GPIO_NUM_33
@@ -158,16 +231,51 @@ void init_GPIO(void)
     gpio_reset_pin(GPIO_Q2);
     gpio_reset_pin(GPIO_Q3);
     gpio_reset_pin(GPIO_Q4);
+    gpio_reset_pin(BUTTON_I1);
+    gpio_reset_pin(BUTTON_I2);
     /* Set the GPIO as a push/pull output */
     gpio_set_direction(GPIO_Q1, GPIO_MODE_OUTPUT);
     gpio_set_direction(GPIO_Q2, GPIO_MODE_OUTPUT);
     gpio_set_direction(GPIO_Q3, GPIO_MODE_OUTPUT);
     gpio_set_direction(GPIO_Q4, GPIO_MODE_OUTPUT);
-
+    gpio_set_direction(BUTTON_I1, GPIO_MODE_INPUT);
+    gpio_set_direction(BUTTON_I2, GPIO_MODE_INPUT);
     gpio_set_level(GPIO_Q1, 0);
     gpio_set_level(GPIO_Q2, 0);
     gpio_set_level(GPIO_Q3, 0);
     gpio_set_level(GPIO_Q4, 0);
+}
+
+
+
+static int I1 = 0;
+static int I2 = 0;
+CYCLE_4_TAP CYCLE_4A;
+
+/* ************************************************************************ */
+void AppVTClientDoProcess(const ISOVT_EVENT_DATA_T* psEvData)
+{  /* Cyclic VTClient function */
+
+
+
+	// to achieve this:
+
+	//IsoVtcCmd_CtrlAudioSignal(u8Instance, 0, 700, 500, 0);
+	//vTaskDelay(pdMS_TO_TICKS(500));
+	//IsoVtcCmd_CtrlAudioSignal(u8Instance, 0, 940, 1000, 0);
+
+
+	I1 = !gpio_get_level(BUTTON_I1);
+	I2 = !gpio_get_level(BUTTON_I2);
+
+	CYCLE_4A(I1);
+	if (CYCLE_4A.Q0) IsoVtcCmd_CtrlAudioSignal(psEvData->u8Instance, 1, 700,  500, 0);
+	if (CYCLE_4A.Q1) IsoVtcCmd_CtrlAudioSignal(psEvData->u8Instance, 1, 940, 1000, 0);
+	if (CYCLE_4A.Q2) IsoVtcCmd_CtrlAudioSignal(psEvData->u8Instance, 1, 1030, 500, 0);
+
+
+
+
 }
 
 

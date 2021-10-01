@@ -54,8 +54,8 @@ static bool parseAuxEntry(char* entry, VT_AUXAPP_T* auxEntry);
 static bool getKeyByID(iso_s16 wObjID_Fun, char* key, size_t size);
 static bool getValue(const VT_AUXAPP_T& auxEntry, char* value, size_t size);
 
-extern const int FIRST_AUX;
-extern const int  LAST_AUX;
+extern "C" const int FIRST_AUX;
+extern "C" const int  LAST_AUX;
 /* ****************   Auxiliary Assignments  *********************************** */
 
 iso_s16 getAuxAssignment(const char auxSection[], VT_AUXAPP_T asAuxAss[])

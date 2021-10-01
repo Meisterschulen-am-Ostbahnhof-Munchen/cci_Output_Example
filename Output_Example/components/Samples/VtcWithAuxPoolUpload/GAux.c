@@ -5,19 +5,18 @@
 #include "IsoVtcApi.h"
 #include "IsoClientsApi.h"
 #include "GAux.h"
+#include "esp_log.h"
+
+#include "MyProject1.iop.h"
+#include "MyProject1.c.h"
 
 #if defined(_LAY6_) && defined(ISO_VTC_GRAPHIC_AUX)
 
-
-
-/* info to ISO Object Pool */
-#define ISO_DESIGNATOR_WIDTH 60
-#define ISO_DESIGNATOR_HEIGHT 32
-#define ISO_MASK_SIZE 200
+static const char *TAG = "GAux";
 
 #define USERPARAM_GAUX   ((ISO_USER_PARAM_TYPE)0xFF00u)
 
-static const iso_u8 abPoolVersion[] = "WHEPSga   Ext_Implement Vers5000";
+static const iso_u8 abPoolVersion[] = ISO_VERSION_LABEL;
 
 /* pointer to the pool data which should be uploaded */
 static iso_u8 *   pu8PoolData = 0;
@@ -160,7 +159,7 @@ static iso_s16 CbVtcGAuxEvent(const IsoVtcGAux_ConnEv_Ts *pEvent)
       SetGAuxPool(pEvent);
       break;
    case IsoVtcAux_EvActivated:
-      #if 1
+      #if 0
       {  /* command sample: set aux function background color */
          iso_u16 u16ObjID;
          for (u16ObjID = 29002u; u16ObjID <= 29004; u16ObjID++)
@@ -188,7 +187,8 @@ static iso_s16 CbVtcGAuxEvent(const IsoVtcGAux_ConnEv_Ts *pEvent)
 /* ************************************************************************ */
 static void SetGAuxPool(const IsoVtcGAux_ConnEv_Ts * pEvent)
 {
-    iso_u16 u16SKM_Scal = 0u, u16DMScal = 0u;           // Scaling factor * 10000
+    iso_u16 u16SKM_Scal = 0u;         // Scaling factor * 10000
+    iso_u16 u16DM_Scal = 0u;           // Scaling factor * 10000
     ISOVT_POOL_TRANSFER_MODE_e eTransferMode;
 
     (void)IsoVtcGAux_PoolSetVersionLabel(pEvent->u8ConnHnd, 32u, abPoolVersion);
@@ -214,12 +214,22 @@ static void SetGAuxPool(const IsoVtcGAux_ConnEv_Ts * pEvent)
     (void)IsoVtcGAux_PoolLoad(pEvent->u8ConnHnd, eTransferMode, pu8PoolData, u32PoolSize, 200UL, 0u, CbVtcGAuxPoolEvent);
 
     /* set manipulations */
-    u16DMScal = (iso_u16)IsoVtcGAux_PoolReadInfo(pEvent->u8ConnHnd, PoolDataMaskScalFaktor);          // Calling after PoolInit!!!
+    u16DM_Scal = (iso_u16)IsoVtcGAux_PoolReadInfo(pEvent->u8ConnHnd, PoolDataMaskScalFaktor);          // Calling after PoolInit!!!
     u16SKM_Scal = (iso_u16)IsoVtcGAux_PoolReadInfo(pEvent->u8ConnHnd, PoolSoftKeyMaskScalFaktor);
 
-    (void)IsoVtcGAux_PoolSetIDRangeMode(pEvent->u8ConnHnd, 29000, 29099, u16SKM_Scal, Centering);  // Auxiliary function
+
+
+    u16DM_Scal /= 10;
+    u16SKM_Scal /= 10;
+
+    ESP_LOGW(TAG, "PoolDataMaskScalFaktor    =  %i", u16DM_Scal);
+    ESP_LOGW(TAG, "PoolSoftKeyMaskScalFaktor =  %i", u16SKM_Scal);
+
+    (void)IsoVtcGAux_PoolSetIDRangeMode(pEvent->u8ConnHnd, 29000, 29999, u16SKM_Scal, Centering);  // Auxiliary function
+    (void)IsoVtcGAux_PoolSetIDRangeMode(pEvent->u8ConnHnd, 20000, 20899, u16SKM_Scal, NotLoad);    // Pictures in auxiliaries
     (void)IsoVtcGAux_PoolSetIDRangeMode(pEvent->u8ConnHnd, 20900, 20999, u16SKM_Scal, Scaling);    // Pictures in auxiliaries
-    (void)u16DMScal;
+
+
 }
 
 /* ************************************************************************ */
