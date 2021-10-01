@@ -57,10 +57,10 @@
                        \details Since version 8.0 the Base Driver Multi CAN Node API is used as default. \n
                                 Removing _LAY78_ from the configuration disables only the application layer module compilation. \n */
 #define _LAY6_    /**< \brief Enable Part 6:  \link vtcl   Virtual Terminal Client \endlink functionality */
-#define _LAY10_   /**< \brief Enable Part 10: \link taskc  Task Controller Client \endlink functionality */
-#define _LAY13_   /**< \brief Enable Part 13: \link fsclient  File Server Client \endlink functionality */
-#define _LAY14_   /**< \brief Enable Part 14: \link sequencectrl  Sequence Control Client \endlink functionality (needs _LAY6_) */
-#define _NMEA_    /**< \brief Enable NMEA 2000 extension: fast packet transfer, Module IsoDataM.c is necessary */
+//#define _LAY10_   /**< \brief Enable Part 10: \link taskc  Task Controller Client \endlink functionality */
+//#define _LAY13_   /**< \brief Enable Part 13: \link fsclient  File Server Client \endlink functionality */
+//#define _LAY14_   /**< \brief Enable Part 14: \link sequencectrl  Sequence Control Client \endlink functionality (needs _LAY6_) */
+//#define _NMEA_    /**< \brief Enable NMEA 2000 extension: fast packet transfer, Module IsoDataM.c is necessary */
 
 #ifdef DOXYGEN  /* add define to documentation */     
     #define _LAY4_   /**< \brief Enable Part 4: \link niuapi Network Interconnection Unit \endlink service functionality 
@@ -317,7 +317,7 @@ This define replaces RAMSIZEPOOL */
 /*! \brief Maximal number of manipulation ranges
 \details Maximum number of ranges given for pool manipulation
 ( Number of calling #IsoVtcPoolSetIDRangeMode() ) */
-#define ISO_NO_SCALING_ELEMENTS_MAX   (30u)
+#define ISO_NO_SCALING_ELEMENTS_MAX   (60u)
 
 /*! \brief Maximum number of objects loaded, manipulated .. to RAM during one loop
 \details Number of manipulated objects during one machine loop - default is 4 */

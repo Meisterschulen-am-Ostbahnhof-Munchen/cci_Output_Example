@@ -32,7 +32,7 @@
 			</Propertysheet>
 			<Propertysheet Name="SoftKeyMaskProperties">
 				<Property Name="Orientation">
-					<Value>3</Value>
+					<Value>6</Value>
 				</Property>
 				<Property Name="Order">
 					<Value>1</Value>
