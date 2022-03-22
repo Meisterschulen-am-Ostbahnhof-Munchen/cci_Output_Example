@@ -212,7 +212,7 @@ void VTC_setPoolReady(const ISOVT_EVENT_DATA_T* psEvData)
 
 
 #define BUTTON_I1 GPIO_NUM_32		// Pin 32.
-#define BUTTON_I2 GPIO_NUM_39		// Pin 39.
+#define BUTTON_I2 GPIO_NUM_26		// Pin 26.
 #define GPIO_Q1 GPIO_NUM_19
 #define GPIO_Q2 GPIO_NUM_23
 #define GPIO_Q3 GPIO_NUM_33
